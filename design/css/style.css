@@ -18,3 +18,10 @@
 .navbar > .container-fluid .navbar-brand {
   margin-left: -15px;
 }
+
+.navbar { min-width: 400px; }
+
+textarea { resize: none }
+
+/* in order to place bar on top */
+body { margin-top: 60px }
