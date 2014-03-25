@@ -2,7 +2,9 @@
  * Основной CSS файл
  */
  
-
+html,body{
+	height:100%;
+}
 .navbar-center{
     margin: 0 auto;
     display: table;
@@ -25,3 +27,52 @@ textarea { resize: none }
 
 /* in order to place bar on top */
 body { margin-top: 60px }
+
+
+.block{
+	border-bottom:dashed 1px #79432A;
+
+}
+.container{
+	
+	
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+h1,h2,h3,h4,h5,h6{
+	color:#79432A;
+}
+
+.vk_btn{
+	background: #4E729A url(http://ulogin.ru/img/panel8.png) -4px 0px;
+	background-position: 0 -38px;
+	width: 32px;
+	height: 32px;
+	margin-top:20px;
+}
+.vk_btn:hover{
+	opacity: .55;
+}
+
+
+.top{
+	margin-top:-60px;
+	height:60px;
+	background:#79432A;
+}
+.logo{
+	margin-left:50px;
+}
+.sign_in{
+	color:#fff;
+	font-size:24px;
+	margin-left:35px;
+	font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+}
+header h1{
+	color:#fff;
+}
