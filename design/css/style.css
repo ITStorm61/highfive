@@ -4,6 +4,7 @@
  
 html,body{
 	height:100%;
+	background:#F5F5F5;
 }
 .navbar-center{
     margin: 0 auto;
@@ -30,9 +31,22 @@ body { margin-top: 60px }
 
 
 .block{
-	border-bottom:dashed 1px #79432A;
+		border:solid 1px #F5F5F5;
+}
+
+.block:hover{
+	background:#EBEBEB;
+	border:solid 1px #000;
 
 }
+
+.bl{
+	border-left:solid 1px #000;
+}
+.br{
+	border-right:solid 1px #000;
+}
+
 .container{
 	
 	
@@ -44,7 +58,12 @@ body { margin-top: 60px }
 	float:right;
 }
 h1,h2,h3,h4,h5,h6{
-	color:#79432A;
+	color:#666;
+}
+
+.img{
+	margin-right:20px;
+	margin-left:20px;
 }
 
 .vk_btn{
@@ -62,17 +81,21 @@ h1,h2,h3,h4,h5,h6{
 .top{
 	margin-top:-60px;
 	height:60px;
-	background:#79432A;
+	background:#666;
 }
 .logo{
-	margin-left:50px;
+	margin-top:-60px;
 }
 .sign_in{
-	color:#fff;
+	color:#666;
 	font-size:24px;
 	margin-left:35px;
 	font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
 }
-header h1{
-	color:#fff;
+.h1{
+	
+	font-size: 4em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #ddcca3;
+	
 }
