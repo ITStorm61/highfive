@@ -1,0 +1,45 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.navbar-center{
+    margin: 0 auto;
+    display: table;
+    float:none;
+}  
+
+/* always right for all resolutions */
+.navbar-right {
+    float: right !important;
+}
+
+
+.navbar { min-width: 100px; margin-top: 0px; padding-top: 0px;}
+
+textarea { resize: none }
+
+
+@media (min-width: 768px) {
+    #parent_popup {
+      background: rgba(0,0,0,0.6);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+    }
+
+    #popup {
+      background-color: #fff;
+      width: 500px;
+      height: 400px;
+      top: 100px;
+      padding: 5px;
+        position: relative;
+        display: table;
+        float: none;
+      margin: 0 auto;
+
+    }
+}
