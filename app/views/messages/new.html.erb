@@ -1,0 +1,67 @@
+<% content_for :bar do %>
+    <nav class="navbar navbar-default">      
+        <div class="container-fluid">
+            <div class="col-xs-2">
+                <button type="button" class="btn btn-default navbar-btn navbar-left">
+                Back
+                </button>  
+            </div>
+            <div class="col-xs-8">
+              <div class="navbar-center">
+                <h3>Title</h3>
+              </div>
+            </div>
+
+            <div class="col-xs-2">
+                <button type="submit" class="btn btn-default navbar-btn navbar-right">
+                Next
+                </button>  
+            </div>
+        </div>
+    </nav>
+<% end %>
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+
+    <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" id="TaskInput" rows="5" placeholder="Задание"></textarea>
+        </div>
+
+        <div class="form-group">
+          <input class="form-control" placeholder="Награда">
+        </div>
+
+        <div class="form-group ">
+          <div class="input-group date form_datetime input-group-sm">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+            <input class="form-control" size="16" type="text" value="" placeholder="Неограничено" readonly>
+            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+          </div>
+        </div>
+        </form>
+        
+    </div>
+</div>
+
+<script type="text/javascript">
+    function GetRoundedDate()
+    {
+        curDate = new Date();
+        curDate.setMinutes(0);
+        curDate.setHours(curDate.getHours()+1);
+        return curDate;
+    }
+    $(".form_datetime").datetimepicker({
+        format: "dd/MM/yyyy - hh:ii",
+        startDate: GetRoundedDate(),
+        initialDate: GetRoundedDate(), /* TODO: вызывать функцию GetRoundedDate единожды, и использовать полученный результат для двух полей */
+        autoclose: true,     
+        pickerPosition: "top-left",
+        minuteStep: 30,
+        todayHighlight: true,
+        minView: 1
+    });
+    document.getElementById("TaskInput").onfocus=function(){ if(this.value=="") this.value="Пожалуйста, " }
+</script> 
