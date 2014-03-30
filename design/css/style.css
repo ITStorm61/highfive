@@ -70,22 +70,22 @@ h1,h2,h3,h4,h5,h6{
 
 .vk_btn{
 	background: #885E4F url(../images/vk-btn.svg) no-repeat;
-	background-position: 110px 10px;
+	background-position: 115px 8px;
 	background-size: 20%;
 	text-align: left;
-	font-family:HeliosThin;
-	src: url('../fonts/HeliosThin.otf');
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 	font-size: 16px;
 	color:#FFFFFF;
 	border-color: #FFFFFF; 
-	width: 150px;
+	width: 160px;
 	height: 50px;
 	margin-top:6px;
 }
 
 .vk_btn:hover{
 	background: #FFFFFF url(../images/vk-btn-td.svg) no-repeat;
-	background-position: 110px 10px;
+	background-position: 115px 8px;
 	background-size: 20%;
 	color:#885E4F;
 	/*opacity: .55;*/
@@ -94,30 +94,13 @@ h1,h2,h3,h4,h5,h6{
 .navbar-header{
 	color:#FFFFFF; 
 	margin-top:15px;
-	font-family:HeliosThin;
-	src: url('../fonts/HeliosThin.otf');
-	font-weight:lighter;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 }
 
-
-.top{
-	margin-top:-60px;
-	height:60px;
-	background:#666;
-}
-.logo{
-	margin-top:-60px;
-}
-.sign_in{
-	color:#666;
-	font-size:24px;
-	margin-left:35px;
-	font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
-}
 .h1{
-	font-family:HeliosThin;
-	src: url('../fonts/HeliosThin.otf');
-	font-weight:lighter;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 	font-size: 28px;
 	text-align: center;
 	color: #4E4E4E;
@@ -129,18 +112,16 @@ h1,h2,h3,h4,h5,h6{
 }
 	/* Серый текст внутри блоков */
 .text-inblock{
-	font-family:HeliosThin;
-	src: url('../fonts/HeliosThin.otf');
-	font-weight:lighter;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 	text-align: center;
 	font-size: 20px;
 	color: #B0B0B0;
 }
 	/* Заголовок белого цвета внутри блока */
 .text-inblock-header{
-	font-family:HeliosThin;
-	src: url('../fonts/HeliosThin.otf');
-	font-weight:lighter;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 	text-align: center;
 	font-size: 28px;
 	color: #FFFFFF;
@@ -148,9 +129,8 @@ h1,h2,h3,h4,h5,h6{
 
 	/* Текст на белом фоне */ 
 .text-front{
-	font-family:HeliosThin;
-	src: url('../fonts/HeliosThin.otf');
-	font-weight:lighter;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
 	font-size: 18px;
 	text-align: center;
 	color: #7D7D7D;
@@ -168,6 +148,5 @@ h1,h2,h3,h4,h5,h6{
 
 .a-inb:hover {
     color: #FFFFFF; 
-
     text-decoration: none; 
 }
