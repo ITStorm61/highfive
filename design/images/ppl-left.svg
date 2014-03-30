@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128" height="161" viewBox="0, 0, 128, 161">
+  <g id="Layer1">
+    <path d="M17.062,123.565 C26.083,122.273 42.788,125.029 49.857,118.239" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M5.47,114.466 L9.033,113.26 C11.389,112.462 13.948,113.728 14.746,116.084 L20.692,133.665 C21.489,136.022 20.224,138.581 17.867,139.378 L14.305,140.583 C11.948,141.38 9.39,140.115 8.593,137.758 L2.646,120.177 C1.848,117.821 3.113,115.262 5.47,114.466 z" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-miterlimit="2"/>
+    <path d="M14.289,132.326 C29.657,131.611 52.162,146.327 67.732,138.542" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M64.983,120.224 C33.473,120.224 7.93,93.87 7.93,61.362 C7.93,28.854 33.473,2.5 64.983,2.5 C96.493,2.5 122.037,28.854 122.037,61.362 C122.037,93.87 96.493,120.224 64.983,120.224 z" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-miterlimit="2"/>
+    <path d="M36.603,158.528 C47.423,148.597 37.354,129.521 49.857,118.239" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M113.871,161 C111.153,146.398 96.636,134.056 90.225,115.22" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+  </g>
+  <defs/>
+</svg>
