@@ -3,6 +3,7 @@ class MessagesController < ApplicationController
     render :layout => 'dialog'
   end
 
-  def share
+  def share    
+    render :layout => 'dialog'
   end
 end

@@ -1,2 +1,41 @@
-<h1>Messages#share</h1>
-<p>Find me in app/views/messages/share.html.erb</p>
+<% content_for :head do %>
+<title>Поделиться</title>
+<% end %>
+<% content_for :bar do %>
+    <nav class="navbar navbar-default">      
+        <div class="container-fluid">
+            <div class="col-xs-2">
+                <button type="button" class="btn btn-default navbar-btn navbar-left">
+                Back
+                </button>  
+            </div>
+            <div class="col-xs-8">
+              <div class="navbar-center navbar-header">
+                <h3>Title</h3>
+              </div>
+            </div>
+
+        </div>
+    </nav>
+<% end %>
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+
+    <form role="form">
+
+        <div class="input-group">
+            <input class="form-control text-input" onfocus="$(this).select()" value="http://foo.bar/biz" readonly>
+
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default">
+                Copy to clipboard
+                </button>  
+            </span>
+        </div>
+
+
+    </form>
+        
+    </div>
+</div>
