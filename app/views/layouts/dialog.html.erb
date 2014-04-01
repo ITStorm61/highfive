@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Создать</title>
+  <%= yield :head %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -9,8 +9,8 @@
 <body>
 
 <div class="container">
-    <div id="parent_popup">
-        <div id="popup">
+    <div class="parent_popup">
+        <div class="popup">
             <%= yield :bar %>
             <%= yield %>
         </div>
