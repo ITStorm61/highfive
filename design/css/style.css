@@ -30,16 +30,6 @@ textarea { resize: none }
 body { margin-top: 60px }
 
 
-.block{
-		border:solid 1px #F5F5F5;
-}
-
-.block:hover{
-	background:#EBEBEB;
-	border:solid 1px #000;
-
-}
-
 .bl{
 	border-left:solid 1px #000;
 }
@@ -149,4 +139,58 @@ h1,h2,h3,h4,h5,h6{
 .a-inb:hover {
     color: #FFFFFF; 
     text-decoration: none; 
+}
+
+.band-block {
+	font-family: 'Open Sans', sans-serif;
+	border-radius: 10px;
+	border-bottom-width: 1px;
+	border-bottom-color: 666;
+	margin-top: 1%;
+}
+
+.band-block:hover {
+	background: #EBEBEB;
+}
+
+.nickname {
+	font-size: 15px;
+	color: #885E4F;
+	text-align: left;
+}
+
+.updated {
+	color: #7D7D7D;
+	font-size: 12px;
+	text-align: right;
+}
+
+.status {
+	color: #885E4F;
+	font-size: 13px;
+	text-align: right;
+	vertical-align: top;
+	margin-bottom: 50%;
+}
+
+.task {
+	font-size: 13px;
+	color: #7D7D7D;
+	vertical-align: top;
+}
+
+.award {
+	font-size: 12px;
+	color: #885E4F;
+	text-align: right;
+}
+
+.remaining {
+	font-size: 13px;
+	color: #7D7D7D;
+	text-align: center;
+}
+
+.avatar {
+	margin-top: 25%;
 }
