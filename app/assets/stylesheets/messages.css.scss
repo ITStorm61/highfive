@@ -3,19 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.navbar-center{
-    margin: 0 auto;
-    display: table;
-    float:none !important;
-}  
-
-/* always right for all resolutions */
-.navbar-right {
-    float: right !important;
-}
-
-
-
 textarea { resize: none }
 
 
@@ -44,68 +31,90 @@ textarea { resize: none }
     }
 }
 
+.container{
+      padding: 5px;
+}
 
 .navbar { 
   min-width: 100px; 
   margin: -5px;
   padding: 0;
-  border-radius: 0 !important;
-  border: none !important;
-  background: #885E4F !important;
+  border-radius: 0;
+  border: none;
+  background: #885E4F;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 
-.navbar-header{
-  color:#FFFFFF !important; 
+.header{
+  color:#FFFFFF; 
   font-family: 'Open Sans', sans-serif;
   font-weight:300;
+  font-size: 24px;
+  display: inline-block;
+  margin-top: 5px;
 }
 
 
 .btn{
-  background: #885E4F no-repeat !important;
-  
-  border-color: #885E4F !important; 
+ 
+  background: #885E4F no-repeat;  
+ 
   text-align: left;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #FFFFFF !important;
-  border-radius: 0 !important;
+  color: #FFFFFF;
+ /* border-radius: 0;*/
 }
 
 .btn:hover{
-  background: #FFFFFF no-repeat !important;
+  background: #FFFFFF no-repeat;
   background-size: 20%;
-  color: #885E4F !important;  
-  border-color: #885E4F !important; 
+  color: #885E4F;  
+  border-color: #885E4F; 
   /*opacity: .55;*/
 }
-
-.navbar-btn
+.nav-btn
 {
   width: 60px;
   height: 40px;
-  margin-top:6px;
-  border-color: #FFFFFF !important; 
+  margin:5px;
+  display: inline-block;
+  border-color: #FFFFFF; 
+}
+
+.input-group-btn > .btn
+{
+  height: 34px;
 }
 
 .text-input
 {
-  border-radius: 0 !important;
-  border: 1px solid #ccc !important;
+  border-radius: 0;
+  border: 1px solid #ccc;
 }
 
 .text-input:focus {
-  border-color: #885E4F !important;
+  border-color: #885E4F;
   outline: 0;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 
 .text-input[readonly],
 {
-  cursor: default !important;
-  background-color: #fff !important;
+  cursor: default;
+  background-color: #fff;
   opacity: 1;
 }
+
+.fleft{
+    float:left;
+}  
+
+.fright {
+    float: right;
+}
+

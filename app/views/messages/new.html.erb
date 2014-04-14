@@ -3,26 +3,7 @@
 <% end %>
 
 <% content_for :bar do %>
-    <nav class="navbar navbar-default">      
-        <div class="container-fluid">
-            <div class="col-xs-2">
-                <button type="button" class="btn btn-default navbar-btn navbar-left">
-                Back
-                </button>  
-            </div>
-            <div class="col-xs-8">
-              <div class="navbar-center navbar-header">
-                <h3>Title</h3>
-              </div>
-            </div>
 
-            <div class="col-xs-2">
-                <button type="button" class="btn btn-default navbar-btn navbar-right">
-                Next
-                </button>  
-            </div>
-        </div>
-    </nav>
 <% end %>
 
 <div class="row">
@@ -55,7 +36,7 @@
 </div>
 
 <script type="text/javascript">
-    function GetRoundedDate()
+   /* function GetRoundedDate()
     {
         curDate = new Date();
         curDate.setMinutes(0);
@@ -65,12 +46,12 @@
     $(".form_datetime").datetimepicker({
         format: "dd/MM/yyyy - hh:ii",
         startDate: GetRoundedDate(),
-        initialDate: GetRoundedDate(), /* TODO: вызывать функцию GetRoundedDate единожды, и использовать полученный результат для двух полей */
+        initialDate: GetRoundedDate(), /* TODO: вызывать функцию GetRoundedDate единожды, и использовать полученный результат для двух полей *
         autoclose: true,     
         pickerPosition: "top-left",
         minuteStep: 30,
         todayHighlight: true,
         minView: 1
-    });
+    });*/
     document.getElementById("TaskInput").onfocus=function(){ if(this.value=="") this.value="Пожалуйста, " }
 </script> 
