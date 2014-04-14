@@ -11,7 +11,23 @@
 <div class="container">
     <div class="parent_popup">
         <div class="popup">
-            <%= yield :bar %>
+            <nav class="navbar"> 
+                  <div class="fleft">
+                      <button type="button" class="btn nav-btn">
+                      Back
+                      </button>  
+                    </div>
+
+                    <div class="header">
+                      Title
+                    </div>                
+                    
+                    <div class="fright">
+                      <button type="button" class="btn nav-btn">
+                      Next
+                      </button>
+                    </div>
+            </nav>
             <%= yield %>
         </div>
     </div>
