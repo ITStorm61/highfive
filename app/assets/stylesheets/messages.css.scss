@@ -72,8 +72,7 @@ textarea { resize: none }
   background: #FFFFFF no-repeat;
   background-size: 20%;
   color: #885E4F;  
-  border-color: #885E4F; 
-  /*opacity: .55;*/
+  border-color: #885E4F;
 }
 .nav-btn
 {
@@ -84,9 +83,11 @@ textarea { resize: none }
   border-color: #FFFFFF; 
 }
 
-.input-group-btn > .btn
-{
-  height: 34px;
+.input-group-btn { 
+  .btn
+  {
+    height: 34px;
+  }
 }
 
 .text-input
@@ -110,11 +111,13 @@ textarea { resize: none }
   opacity: 1;
 }
 
-.fleft{
+.fleft
+{
     float:left;
 }  
 
-.fright {
+.fright
+{
     float: right;
 }
 

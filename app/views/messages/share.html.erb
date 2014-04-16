@@ -1,6 +1,4 @@
-<% content_for :head do %>
-<title>Поделиться</title>
-<% end %>
+<% provide(:title, "Поделиться") %>
 
 
 <div class="row">
@@ -9,7 +7,7 @@
     <form role="form">
 
         <div class="input-group">
-            <input class="form-control text-input" onfocus="$(this).select()" value="http://foo.bar/biz" readonly>
+            <input class="form-control text-input" onfocus="this.select()" value="http://foo.bar/biz" readonly>
 
             <span class="input-group-btn">
                 <button type="button" class="btn">
@@ -20,6 +18,6 @@
 
 
     </form>
-        
+
     </div>
 </div>
