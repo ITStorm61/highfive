@@ -4,7 +4,7 @@
   <g id="Layer 1">
     <path d="M5.508,0.938 L53.492,0.938 C56.016,0.938 58.062,3.164 58.062,5.91 L58.062,53.09 C58.062,55.836 56.016,58.062 53.492,58.062 L5.508,58.062 C2.984,58.062 0.938,55.836 0.938,53.09 L0.938,5.91 C0.938,3.164 2.984,0.938 5.508,0.938 z" fill="#FFFFFF"/>
     <text transform="matrix(1, 0, 0, 1, 29.5, 29.5)">
-      <tspan x="-14.443" y="14.5" font-family="Helvetica-Bold" font-size="40" fill="#885E4F">В</tspan>
+      <tspan x="-14.5" y="13.52" font-family="Helvetica-Bold" font-size="40" fill="#DC4C26">В</tspan>
     </text>
   </g>
   <defs/>
