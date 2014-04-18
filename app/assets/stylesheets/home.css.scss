@@ -1,3 +1,131 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+ html,body{
+	height:100%;
+	background:#FFFFFF;
+}
+.navbar-center{
+    margin: 0 auto;
+    display: table;
+    float:none;
+}  
+
+/* always right for all reslutuins */
+.navbar-right {
+    float: right !important;
+  }
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+  margin-left: -15px;
+}
+
+.navbar { min-width: 400px; background: #DC4C26;}
+
+textarea { resize: none }
+
+/* in order to place bar on top */
+body { margin-top: 60px }
+
+
+.bl{
+	border-left:solid 1px #000;
+}
+.br{
+	border-right:solid 1px #000;
+}
+
+.container{
+	
+	
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+h1,h2,h3,h4,h5,h6{
+	color:#666;
+}
+
+.vk_btn{
+	background: #DC4C26 url(../images/vk-btn.svg) no-repeat;
+	background-position: 115px 8px;
+	background-size: 20%;
+	text-align: left;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size: 16px;
+	color:#FFFFFF;
+	border-color: #FFFFFF; 
+	width: 160px;
+	height: 50px;
+	margin-top:6px;
+}
+
+.vk_btn:hover{
+	background: #FFFFFF url(../images/vk-btn-td.svg) no-repeat;
+	background-position: 115px 8px;
+	background-size: 20%;
+	color:#DC4C26;
+	/*opacity: .55;*/
+}
+
+.navbar-header{
+	color:#FFFFFF; 
+	margin-top:15px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+}
+
+.h1{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size: 28px;
+	text-align: center;
+	color: #4E4E4E;
+	
+}
+	/* Блок коричневого цвета с текстом */
+.text-block{
+	background: #E8E8E8;
+}
+	/* Серый текст внутри блоков */
+.text-inblock{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	text-align: center;
+	font-size: 20px;
+	color: #B0B0B0;
+}
+	/* Заголовок белого цвета внутри блока */
+.text-inblock-header{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	text-align: center;
+	font-size: 28px;
+	color: #DC4C26;
+}
+
+	/* Текст на белом фоне */ 
+.text-front{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size: 18px;
+	text-align: center;
+	color: #7D7D7D;
+}
+
+	/* Ссылки внутри блоков */
+.a-inb {
+    color: #B0B0B0; 
+    text-decoration: none; 
+}
+
+.a-inb:visited {
+    color: #B0B0B0; 
+} 
+
+.a-inb:hover {
+    color: #FFFFFF; 
+    text-decoration: none; 
+}

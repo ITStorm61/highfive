@@ -2,9 +2,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="59" height="59" viewBox="0, 0, 59, 59">
   <g id="Layer 1">
-    <path d="M5.569,1 L53.554,1 C56.077,1 58.123,3.226 58.123,5.972 L58.123,53.152 C58.123,55.897 56.077,58.123 53.554,58.123 L5.569,58.123 C3.046,58.123 1,55.897 1,53.152 L1,5.972 C1,3.226 3.046,1 5.569,1 z" fill="#9A7263"/>
-    <text transform="matrix(1, 0, 0, 1, 29.562, 29.562)">
-      <tspan x="-14.443" y="14.5" font-family="Helvetica-Bold" font-size="40" fill="#FFFFFF">В</tspan>
+    <path d="M5.569,1 L53.554,1 C56.077,1 58.123,3.226 58.123,5.972 L58.123,53.152 C58.123,55.897 56.077,58.123 53.554,58.123 L5.569,58.123 C3.046,58.123 1,55.897 1,53.152 L1,5.972 C1,3.226 3.046,1 5.569,1 z" fill="#DC4C26"/>
+    <text transform="matrix(1, 0, 0, 1, 29.5, 29.561)">
+      <tspan x="-14.5" y="13.52" font-family="Helvetica-Bold" font-size="40" fill="#FFFFFF">В</tspan>
     </text>
   </g>
   <defs/>
