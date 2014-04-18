@@ -33,10 +33,6 @@ body { margin-top: 60px }
 	border-right:solid 1px #000;
 }
 
-.container{
-	
-	
-}
 .fl{
 	float:left;
 }
@@ -47,8 +43,8 @@ h1,h2,h3,h4,h5,h6{
 	color:#666;
 }
 
-.vk_btn{
-	background: #DC4C26 url(../images/vk-btn.svg) no-repeat;
+.index-vk_btn{
+	background: #DC4C26 url(/images/vk-btn.svg) no-repeat;
 	background-position: 115px 8px;
 	background-size: 20%;
 	text-align: left;
@@ -59,25 +55,29 @@ h1,h2,h3,h4,h5,h6{
 	border-color: #FFFFFF; 
 	width: 160px;
 	height: 50px;
-	margin-top:6px;
+	margin-top:7px;
+	border: 1px;
+  	border-radius: 3px;
+  	border-style: solid;
+  	/*transition: 0.2s;*/
 }
 
-.vk_btn:hover{
-	background: #FFFFFF url(../images/vk-btn-td.svg) no-repeat;
+.index-vk_btn:hover{
+	background: #FFFFFF url(/images/vk-btn-td.svg) no-repeat;
 	background-position: 115px 8px;
 	background-size: 20%;
 	color:#DC4C26;
 	/*opacity: .55;*/
 }
 
-.navbar-header{
+.index-navbar-header{
 	color:#FFFFFF; 
 	margin-top:15px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 }
 
-.h1{
+.index-h1{
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 	font-size: 28px;
@@ -86,11 +86,11 @@ h1,h2,h3,h4,h5,h6{
 	
 }
 	/* Блок коричневого цвета с текстом */
-.text-block{
+.index-text-block{
 	background: #E8E8E8;
 }
 	/* Серый текст внутри блоков */
-.text-inblock{
+.index-text-inblock{
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 	text-align: center;
@@ -98,7 +98,7 @@ h1,h2,h3,h4,h5,h6{
 	color: #B0B0B0;
 }
 	/* Заголовок белого цвета внутри блока */
-.text-inblock-header{
+.index-text-inblock-header{
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 	text-align: center;
@@ -107,7 +107,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 	/* Текст на белом фоне */ 
-.text-front{
+.index-text-front{
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 	font-size: 18px;
@@ -116,16 +116,16 @@ h1,h2,h3,h4,h5,h6{
 }
 
 	/* Ссылки внутри блоков */
-.a-inb {
+.index-a-inb {
     color: #B0B0B0; 
     text-decoration: none; 
 }
 
-.a-inb:visited {
+.index-a-inb:visited {
     color: #B0B0B0; 
 } 
 
-.a-inb:hover {
+.index-a-inb:hover {
     color: #FFFFFF; 
     text-decoration: none; 
 }

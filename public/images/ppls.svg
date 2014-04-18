@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="215" height="161" viewBox="0, 0, 215, 161">
+  <g id="Layer1">
+    <path d="M52.749,106.647 C24.781,106.647 2.108,83.255 2.108,54.4 C2.108,25.545 24.781,2.153 52.749,2.153 C80.718,2.153 103.391,25.545 103.391,54.4 C103.391,83.255 80.718,106.647 52.749,106.647 z" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M52.749,106.647 C60.756,105.5 77.256,120.824 96.718,120.824" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M98.22,132.142 C92.883,132.142 88.556,128.317 88.556,123.598 C88.556,118.88 92.883,115.055 98.22,115.055 C103.558,115.055 107.885,118.88 107.885,123.598 C107.885,128.317 103.558,132.142 98.22,132.142 z" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M162.858,124.338 C134.889,124.338 112.216,100.946 112.216,72.091 C112.216,43.236 134.889,19.844 162.858,19.844 C190.827,19.844 213.5,43.236 213.5,72.091 C213.5,100.946 190.827,124.338 162.858,124.338 z" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M119.171,126.627 C132.812,125.992 152.788,139.055 166.608,132.145" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M13.406,144.34 C23.01,135.525 29.314,116.875 33.947,102.919" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M79.954,143.292 C74.353,137.217 76.998,113.672 69.395,103.967" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M140.115,159.5 C149.719,150.685 140.782,133.753 151.88,123.739" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M206.377,159.5 C203.964,146.539 191.08,135.584 185.388,118.865" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+  </g>
+  <defs/>
+</svg>
