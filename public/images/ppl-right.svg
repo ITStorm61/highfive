@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128" height="161" viewBox="0, 0, 128, 161">
-  <g id="Layer1">
-    <path d="M63.691,117.781 C32.501,117.781 7.216,91.695 7.216,59.516 C7.216,27.337 32.501,1.251 63.691,1.251 C94.882,1.251 120.166,27.337 120.166,59.516 C120.166,91.695 94.882,117.781 63.691,117.781 z" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
-    <path d="M83.492,114.808 C92.421,113.529 94.374,130.635 105.808,124.459" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
-    <path d="M112.538,114.942 L116.149,115.841 C118.54,116.435 119.997,118.855 119.401,121.246 L114.965,139.072 C114.37,141.463 111.95,142.92 109.559,142.324 L105.948,141.425 C103.557,140.831 102.101,138.41 102.696,136.02 L107.132,118.193 C107.728,115.802 110.147,114.346 112.538,114.942 z" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
-    <path d="M55.941,130.396 C71.153,129.688 93.43,144.256 108.842,136.55" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
-    <path d="M22.221,161 C32.932,151.17 39.962,130.371 45.129,114.808" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
-    <path d="M95.307,158.592 C89.059,151.819 92.01,125.562 83.53,114.739" fill-opacity="0" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="215" height="161" viewBox="0, 0, 215, 161">
+  <g id="Layer 1">
+    <path d="M147.139,113.826 L154.398,116.92 C154.906,117.136 155.142,117.723 154.926,118.232 L148.202,134.01 C147.985,134.518 147.398,134.754 146.89,134.537 L139.631,131.444 C139.122,131.227 138.886,130.64 139.103,130.132 L145.827,114.354 C146.043,113.846 146.631,113.609 147.139,113.826 z" fill-opacity="0" stroke="#DC4C26" stroke-width="1"/>
+    <path d="M104.364,113.807 C76.396,113.807 53.723,90.415 53.723,61.56 C53.723,32.705 76.396,9.313 104.364,9.313 C132.333,9.313 155.006,32.705 155.006,61.56 C155.006,90.415 132.333,113.807 104.364,113.807 z" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M104.364,113.807 C112.371,112.66 127.392,126.712 146.854,126.712" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M65.021,151.5 C74.625,142.685 80.929,124.035 85.562,110.079" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M131.569,150.452 C125.968,144.377 128.613,120.832 121.01,111.127" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
+    <path d="M121.01,111.188 C127.352,113.807 134.249,121.043 143.552,120.362" fill-opacity="0" stroke="#DC4C26" stroke-width="1" stroke-linecap="round" stroke-miterlimit="2"/>
   </g>
   <defs/>
 </svg>
