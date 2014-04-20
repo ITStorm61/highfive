@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :tasks
 	def self.find_by_omni(auth)
 		where(auth.slice("uid","provider")).first || create_by_omni(auth)
 	end
