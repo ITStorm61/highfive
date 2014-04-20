@@ -1,23 +1,26 @@
 class MessagesController < ApplicationController
 	before_action :set_current_user
-  before_action :signed_in_user, only: [:new]
-
+  before_action :signed_in_user, only: [:new, :index]
+  layout "dialog"
+  def index
+  end
+  
   def new
-    render :layout => 'dialog' 
+    @task  = Task.new
   end
 
   def create
 
-    @cur_task  = Task.new(task_params)
-    @cur_task.user_id=@current_user.id
-    @cur_task.slave_id=777
+    @task  = Task.new(task_params)
+    @task.user_id=@current_user.id
+    @task.slave_id=666
 
-    @cur_task.status="Open"
+    @task.status="Open"
 
-    if @cur_task.save
-      render :text => "Ok"
+    if @task.save
+      render :text => "#{@task.save}"
     else
-      render :text => "Error!"
+      render 'new'
     end
 
   end

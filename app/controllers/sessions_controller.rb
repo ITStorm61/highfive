@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def create
   	@user=User.find_by_omni(request.env['omniauth.auth'])
   	session[:user_id]=@user.id
-  	redirect_to messages_path
+  	redirect_to messages_index_path
   end
   def destroy
   	session.delete (:user_id)

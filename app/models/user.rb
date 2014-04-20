@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
 				user.picture_url=auth.info.image
 				user.name=auth.info.name
 			end
+			if auth.provider=="developer"
+				user.name=auth.info.name
+			end
 		end
 	end	
 end

@@ -6,9 +6,10 @@ PLZKI::Application.routes.draw do
 
   get "logout", to:"sessions#destroy"
 
-  #get "messages/index",as:"messages"
+  get "messages/index"
   get "messages/new"
   get "messages/share"
+
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

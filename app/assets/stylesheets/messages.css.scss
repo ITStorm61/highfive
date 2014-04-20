@@ -120,3 +120,21 @@ textarea { resize: none }
     float: right;
 }
 
+
+.field_with_errors
+{
+  .text-input{
+    border-color: #A66;
+  }
+}
+.error_explanation
+{
+  padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
