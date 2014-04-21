@@ -7,6 +7,7 @@ PLZKI::Application.routes.draw do
   get "logout", to:"sessions#destroy"
 
   get "messages/index"
+  match "messages/show/:id", to: 'messages#show', via:[:get, :post], as: 'messages_show'
   get "messages/new"
   get "messages/share"
 
