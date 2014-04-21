@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$main-bg: #885E4F;
+$white: #fff;
+
 textarea { resize: none }
 
 
@@ -17,7 +20,7 @@ textarea { resize: none }
     }
 
     .popup {
-      background-color: #fff;
+      background-color: $white;
       width: 500px;
       height: 400px;
       top: 100px;
@@ -31,24 +34,20 @@ textarea { resize: none }
     }
 }
 
-.container{
-      padding: 5px;
-}
-
-.navbar { 
+.dialog-bar { 
   min-width: 100px; 
   margin: -5px;
   padding: 0;
   border-radius: 0;
   border: none;
-  background: #885E4F;
+  background: $main-bg;
   text-align: center;
   margin-bottom: 10px;
 }
 
 
 .header{
-  color:#FFFFFF; 
+  color:$white; 
   font-family: 'Open Sans', sans-serif;
   font-weight:300;
   font-size: 24px;
@@ -59,20 +58,20 @@ textarea { resize: none }
 
 .btn{
  
-  background: #885E4F no-repeat;  
+  background: $main-bg no-repeat;  
  
   text-align: left;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #FFFFFF;
+  color: $white;
  /* border-radius: 0;*/
 }
 
 .btn:hover{
-  background: #FFFFFF no-repeat;
+  background: $white no-repeat;
   background-size: 20%;
-  color: #885E4F;  
-  border-color: #885E4F;
+  color: $main-bg;  
+  border-color: $main-bg;
 }
 .nav-btn
 {
@@ -80,7 +79,7 @@ textarea { resize: none }
   height: 40px;
   margin:5px;
   display: inline-block;
-  border-color: #FFFFFF; 
+  border-color: $white; 
 }
 
 .input-group-btn { 
@@ -97,7 +96,7 @@ textarea { resize: none }
 }
 
 .text-input:focus {
-  border-color: #885E4F;
+  border-color: $main-bg;
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -107,7 +106,7 @@ textarea { resize: none }
 .text-input[readonly],
 {
   cursor: default;
-  background-color: #fff;
+  background-color: $white;
   opacity: 1;
 }
 
@@ -121,3 +120,21 @@ textarea { resize: none }
     float: right;
 }
 
+
+.field_with_errors
+{
+  .text-input{
+    border-color: #A66;
+  }
+}
+.error_explanation
+{
+  padding: 10px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}

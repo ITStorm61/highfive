@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :tasks
 	def self.find_by_omni(auth)
 		where(auth.slice("uid","provider")).first || create_by_omni(auth)
 	end
@@ -9,6 +10,9 @@ class User < ActiveRecord::Base
 			user.provider=auth.provider
 			if auth.provider=="vkontakte"
 				user.picture_url=auth.info.image
+				user.name=auth.info.name
+			end
+			if auth.provider=="developer"
 				user.name=auth.info.name
 			end
 		end

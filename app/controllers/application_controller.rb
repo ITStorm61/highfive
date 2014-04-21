@@ -6,4 +6,10 @@ class ApplicationController < ActionController::Base
   def set_current_user
   	@current_user=User.find_by_id(session[:user_id]) unless session[:user_id].nil?
   end
+
+  def signed_in_user
+    if !@current_user
+      render :text => 'login plz'
+    end
+  end
 end
