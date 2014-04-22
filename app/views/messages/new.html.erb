@@ -3,9 +3,6 @@
 <div class="row">
     <div class="col-md-12 col-xs-12">
 
-
-
-
     <%= form_for :task, url: messages_path do |f|%>
 
         <% if @task.errors.any? %>
@@ -58,7 +55,6 @@
         todayHighlight: true,
         minView: 1
         });
-        document.getElementById("TaskInput").onfocus=function(){ if(this.value=="") this.value="Пожалуйста, "; }
     </script> 
 
     </div>
