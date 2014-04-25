@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-md-12 col-xs-12">
 
-    <%= form_for :task, url: messages_path do |f|%>
+    <%= form_for :task, :url => tasks_path do |f|%>
 
         <% if @task.errors.any? %>
               <div class="error_explanation">
