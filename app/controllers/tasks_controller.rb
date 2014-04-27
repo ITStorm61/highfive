@@ -1,9 +1,9 @@
-class MessagesController < ApplicationController
+class TasksController < ApplicationController
 	before_action :set_current_user
-  before_action :signed_in_user, only: [:new, :index]
-  layout "dialog"
+  
 
   def index
+    @tasks=Task.where("user_id=? or slave_id=?",@current_user.id, @current_user.id).includes(:user)
   end
 
   def show
@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
   
   def new
     @task  = Task.new
+    render :layout =>"dialog"
   end
 
   def create
@@ -23,7 +24,7 @@ class MessagesController < ApplicationController
     @task.status="Open"
 
     if @task.save
-      redirect_to :controller=>'messages', :action => 'share', :id => @task.id
+      render 'share', :layout =>"dialog"
     else
       render 'new'
     end
@@ -31,7 +32,7 @@ class MessagesController < ApplicationController
   end
 
   def share
-    @share_url="#{messages_show_url(params[:id])}"
+    render :layout =>"dialog"
   end
 
 

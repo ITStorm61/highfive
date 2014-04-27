@@ -4,12 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def set_current_user
-  	@current_user=User.find_by_id(session[:user_id]) unless session[:user_id].nil?
+  	return redirect_to root_path if session[:user_id].blank? 
+    @current_user=User.find_by_id(session[:user_id]) unless session[:user_id].nil?
+    return redirect_to root_path unless @current_user 
   end
 
-  def signed_in_user
-    if !@current_user
-      render :text => 'login plz'
-    end
-  end
+
 end
