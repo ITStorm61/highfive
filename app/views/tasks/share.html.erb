@@ -1,15 +1,25 @@
 <% provide(:title, "Поделиться") %>
 
 <% content_for :nav_right_button do %>
-    <%= link_to "Done", tasks_path, :class => "btn nav-btn" %>
+    <%= link_to "Готово", tasks_path, :class => "btn nav-btn" %>
 <% end %>
 
 <div class="row">
     <div class="col-md-12 col-xs-12">
         <div data-url="<%= task_url(@task.id) %>" class="pluso" data-background="transparent" data-options="big,square,line,horizontal,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir"></div>
-        <form role="form">
+
+    <form role="form">
+
+        <div class="input-group">
             <input class="form-control text-input" onfocus="this.select()" value="<%= task_url(@task.id) %>" readonly>
-        </form>
+
+            <span class="input-group-btn">
+                <button type="button" class="btn">
+                Скопировать ссылку
+                </button>  
+            </span>
+        </div>
+    </form>
     </div>
 </div>
 

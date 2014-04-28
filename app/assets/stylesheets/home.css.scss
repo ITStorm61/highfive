@@ -15,7 +15,6 @@
 
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand {
-  margin-left: -15px;
 }
 
 .navbar { min-width: 400px; background: #DC4C26;}
@@ -49,6 +48,7 @@ h1,h2,h3,h4,h5,h6{
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 	font-size: 16px;
+	text-decoration: none;
 	color:#FFFFFF;
 	border-color: #FFFFFF; 
 	width: 160px;
@@ -65,6 +65,7 @@ h1,h2,h3,h4,h5,h6{
 	background-position: 115px 8px;
 	background-size: 20%;
 	color:#DC4C26;
+	text-decoration: none;
 	/*opacity: .55;*/
 }
 
