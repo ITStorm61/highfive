@@ -5,5 +5,7 @@ PLZKI::Application.routes.draw do
 
   get "logout", to:"sessions#destroy"
  
+  get "profiles/show"	
+
   root 'home#index'
 end
