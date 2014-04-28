@@ -1,21 +1,24 @@
 <% provide(:title, "Поделиться") %>
 
+<% content_for :nav_right_button do %>
+    <%= link_to "Done", tasks_path, :class => "btn nav-btn" %>
+<% end %>
 
 <div class="row">
     <div class="col-md-12 col-xs-12">
-
-    <form role="form">
-
-        <div class="input-group">
-            <input class="form-control text-input" onfocus="this.select()" value=<%= @share_url %> readonly>
-
-            <span class="input-group-btn">
-                <button type="button" class="btn">
-                Copy to clipboard
-                </button>  
-            </span>
-        </div>
-    </form>
-    <%= link_to "done", tasks_path %>
+        <div data-url="<%= task_url(@task.id) %>" class="pluso" data-background="transparent" data-options="big,square,line,horizontal,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir"></div>
+        <form role="form">
+            <input class="form-control text-input" onfocus="this.select()" value="<%= task_url(@task.id) %>" readonly>
+        </form>
     </div>
 </div>
+
+<script type="text/javascript">(function() {
+  if (window.pluso)if (typeof window.pluso.start == "function") return;
+  if (window.ifpluso==undefined) { window.ifpluso = 1;
+    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+  }})();</script>

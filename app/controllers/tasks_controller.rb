@@ -26,14 +26,14 @@ class TasksController < ApplicationController
     if @task.save
       render 'share', :layout =>"dialog"
     else
-      render 'new'
+      render 'new', :layout =>"dialog"
     end
 
   end
 
-  def share
-    render :layout =>"dialog"
-  end
+ # def share
+ #   render :layout =>"dialog"
+ # end
 
 
 
