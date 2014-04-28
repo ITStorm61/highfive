@@ -14,18 +14,15 @@
             <nav class="navbar dialog-bar"> 
                   <div class="fleft">
                   
-                      <%= link_to "Назад", tasks_path, :class => "btn nav-btn"%>
+                    <%= link_to "Назад", tasks_path, :class => "btn nav-btn"%>
                     </div>
-                    
-                    <div class="header">
-                      Title
-                    </div>
-                    <div class="fright">
-                    <%= yield(:nav_right_button) %>
-                    </div> 
-                 <!--    <div class="header  col-md-5 col-md-offset-2">
+
+                     <div class="header  col-md-5 col-md-offset-2">
                       Новое задание
-                    </div>     -->            
+                    </div>   
+                  <!--   <div class="fright">
+                    <%= yield(:nav_right_button) %>
+                    </div>  -->            
 
             </nav>
             <%= yield %>
