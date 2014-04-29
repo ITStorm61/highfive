@@ -6,6 +6,6 @@ PLZKI::Application.routes.draw do
 
   get "logout", to:"sessions#destroy"
 
-  get "friends", to: 'tasks#index', as: 'friends'
+  get "friends", to: 'friends#index', as: 'friends'
   root 'home#index'
 end
