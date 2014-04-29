@@ -100,6 +100,19 @@ textarea { resize: none }
   border-color: $white;
 }
 
+.text-block{
+  text-indent:4px;
+
+  padding: 4px;
+
+  background: $white; 
+  color: #A0A0A0;
+  border: 1px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: #E8E8E8;
+}
+
 .nav-btn:hover{
   background: $white;
   color: $main-bg;
