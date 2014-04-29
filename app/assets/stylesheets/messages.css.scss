@@ -85,11 +85,24 @@ textarea { resize: none }
   border-style: solid;
   border-color: $white;
 }
+
+.mrg{
+  margin-top:7px;
+}
+
 .nav-btn
 {
-  margin:7px;
-  display: inline-block;
-  border-color: $white; 
+  background: $white; 
+  color: $main-bg;
+  border: 1px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: $white;
+}
+
+.nav-btn:hover{
+  background: $white;
+  color: $main-bg;
 }
 
 .input-group-btn { 
