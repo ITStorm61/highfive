@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-$main-bg: #885E4F;
+$main-bg: #DC4C26;
 $white: #fff;
 
 textarea { resize: none }
@@ -56,28 +56,38 @@ textarea { resize: none }
 }
 
 
-.btn{
+.btn{ 
  
   background: $main-bg no-repeat;  
  
-  text-align: left;
+  text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: $white;
+  border: 1px;
+  border-radius: 3px;
+  border-style: solid;
+  transition: 0.2s;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+  font-size: 16px;
+
  /* border-radius: 0;*/
 }
 
 .btn:hover{
-  background: $white no-repeat;
+  background: #E8E8E8 no-repeat;
   background-size: 20%;
   color: $main-bg;  
   border-color: $main-bg;
+  border: 1px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: $white;
 }
 .nav-btn
 {
-  width: 60px;
-  height: 40px;
-  margin:5px;
+  margin:7px;
   display: inline-block;
   border-color: $white; 
 }
@@ -137,4 +147,59 @@ textarea { resize: none }
   color: #31708f;
   background-color: #d9edf7;
   border-color: #bce8f1;
+}
+
+.nickname {
+  font-size: 15px;
+  color: #DC4C26;
+  text-align: left;
+}
+
+
+
+.updated {
+  color: #7D7D7D;
+  font-size: 12px;
+  text-align: right;
+}
+
+.status {
+  color: #DC4C26;
+  font-size: 13px;
+  text-align: right;
+  vertical-align: top;
+  margin-bottom: 50%;
+}
+
+.task {
+  font-size: 13px;
+  color: #7D7D7D;
+  vertical-align: top;
+}
+
+.award {
+  font-size: 12px;
+  color: #DC4C26;
+  text-align: right;
+}
+
+.band-block {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  border-bottom-width: 1px;
+  border-bottom-color: 666;
+  margin-top: 1%;
+  transition: 0.2s;
+  border: 1px;
+  border-style: solid;
+  border-color: #EBEBEB;
+}
+
+.band-block:hover {
+  background: #EBEBEB;
+}
+
+
+.avatar {
+  margin-top: 25%;
 }
