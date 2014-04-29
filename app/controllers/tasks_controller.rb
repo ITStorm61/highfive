@@ -8,6 +8,7 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    render :layout =>"dialog"
   end
   
   def new
