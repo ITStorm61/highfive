@@ -1,7 +1,7 @@
 <div class="container-fluid">
 		<div class="row-fluid">
 			<div class="col-lg-3 col-xs-0 col-md-2 col-s-1"></div>
-				<div class="col-lg-6 col-xs-12 col-md-8 col-s-10 band-block">
+				<a href="<%= task_path(task.id) %>" class="col-lg-6 col-xs-12 col-md-8 col-s-10 band-block">
 					<div style="margin-top:2%">
 						<div class="col-lg-1 col-xs-2 col-md-1 col-s-1"> <img class="img-rounded avatar" src="<%= task.user.picture_url %>" height="60px" width="60px"> </div>
 						<div class="col-lg-8 col-xs-8 col-md-9 col-s-9">
@@ -17,7 +17,7 @@
 							<p class="status">Можно взять</p>
 						</div>
 					</div>
-				</div>
+				</a>
 			<div class="col-lg-3 col-xs-0 col-md-2 col-s-1"></div>
 		</div>
 	</div>
