@@ -6,32 +6,12 @@
     <title>HighFive!</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
- 
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
   </head>
   <body>
-  	<div class="container-fluid">
-    	<nav class="row-fluid navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="col-md-3 col-sm-3 col-xs-2 ">
-              <img src="images/logo_sp.svg" style="margin-top:3px" width="58" height="58" >
-        	</div>
-
-            <div class="col-md-5 col-md-offset-1 col-sm-4 col-xs-7 navbar-left">
-              <div class=" btn-toolbar btn-group" style="margin-top:13px">
-                <a class="btn btn-default nav-btn" href="#">Лента</a>
-                <a class="btn btn-default" href="#">Друзья</a>
-                <a class="btn btn-default" href="/profiles/show">Профиль</a> <!-- %= link_to "Профиль", profiles_path, :class => "btn" % -->
-              </div>
-            </div>
-
-            <div class="col-md-3 col-sm-2 col-xs-2 " style="margin-top:7px">
-              <%= link_to "+", new_task_path, :class => "btn mrg" %>
-          </div>
-		</nav>
-	</div>
-
-	<%= yield %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
+    <%= render :partial => 'layouts/top_bar' %>
+    <%= yield %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>

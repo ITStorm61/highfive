@@ -8,4 +8,9 @@ module ApplicationHelper
     end
   end
 
+  def bar_link_to(title, path)
+    strClass = 'btn btn-default'
+    strClass += ' active' if request.fullpath == path
+    return link_to title, path, :class => strClass
+  end
 end
