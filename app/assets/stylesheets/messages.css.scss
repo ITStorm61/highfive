@@ -4,6 +4,7 @@
 
 
 $main-bg: #DC4C26;
+$light: #F1B6A2;
 $white: #fff;
 
 textarea { resize: none }
@@ -61,12 +62,12 @@ textarea { resize: none }
 
 .btn{ 
  
-  background: $main-bg no-repeat;  
+  background: $light no-repeat;  
  
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: $white;
+  color: $main-bg;
   border: 1px;
   border-radius: 3px;
   border-style: solid;
@@ -74,19 +75,19 @@ textarea { resize: none }
   font-family: 'Open Sans', sans-serif;
   font-weight:300;
   font-size: 16px;
-
+  border-color: $light;
  /* border-radius: 0;*/
 }
 
 .btn:hover{
-  background: #E8E8E8 no-repeat;
+  background: $light;
   background-size: 20%;
-  color: $main-bg;  
+  color: $white;  
   border-color: $main-bg;
   border: 1px;
   border-radius: 3px;
   border-style: solid;
-  border-color: $white;
+  border-color: $light;
 }
 
 .mrg{
@@ -231,5 +232,10 @@ textarea { resize: none }
 
 .avatar {
   margin-top: 25%;
+}
+
+.bar-logo-text{
+  font-family: 'Open Sans', sans-serif;
+  color: $white;
 }
 

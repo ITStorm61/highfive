@@ -1,19 +1,21 @@
     <div class="container-fluid">
       <nav class="row-fluid navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="col-md-3 col-sm-3 col-xs-2 ">
-              <img src="images/logo_sp.svg" style="margin-top:3px" width="58" height="58" >
-          </div>
+            <div class="row">
+            <div class="header col-md-2 col-sm-4 col-xs-12" style="margin-left:10px; margin-top:6px;">
+            To Do For Me
+            </div>
 
-            <div class="col-md-5 col-md-offset-1 col-sm-4 col-xs-7 navbar-left">
-              <div class=" btn-toolbar btn-group" style="margin-top:13px">
+            <div class="col-md-5 col-md-offset-3 col-sm-5 col-xs-offset-1 col-xs-8">
+              <div class=" btn-toolbar btn-group" style="margin-top:1px; padding: 5px;">
                 <%= bar_link_to 'Лента', tasks_path %>
                 <%= bar_link_to 'Друзья', friends_path %>
                 <%= bar_link_to 'Профиль', profile_path %>
               </div>
             </div>
 
-            <div class="col-md-3 col-sm-2 col-xs-2 " style="margin-top:7px">
-              <%= link_to "+", new_task_path, :class => "btn mrg" %>
+            <div class="col-md-1 col-sm-1 col-xs-3 navbar-right" style="margin-top:7px">
+              <%= link_to "+", new_task_path, :class => "btn" %>
+          </div>
           </div>
     </nav>
   </div>
