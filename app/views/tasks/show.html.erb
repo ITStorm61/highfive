@@ -1,6 +1,18 @@
-Desc: <%= @task.description %>
-<br>
-St: <%= @task.status %>
-<br>
-Sl: <%= @task.slave_id %>
-<br>
+<div class="container-fluid">
+
+			<div class="col-md-12">
+				<div class="col-md-2">
+					<img class="avatar" src="<%= @task.user.picture_url %>">
+				</div>
+				<div class="col-md-10">
+					<span class="username"><%= @task.user.name %> прислал вам задание</span>
+					<div class="text-block"><%= @task.description %></div>
+					<span>Награда</span>
+					<p class="text-block"><%= @task.cookie %></p>
+					<center>
+						<button type="button" class="btn">Принять</button>
+						<button type="button" class="btn">Отклонить</button>
+					</center>
+				</div>
+			</div>
+</div>

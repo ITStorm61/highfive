@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title(page_title)
-    base_title = "Plzki"
+    base_title = "HighFive! "
     if page_title.empty?
       base_title
     else
@@ -10,7 +10,7 @@ module ApplicationHelper
 
   def bar_link_to(title, path)
     strClass = 'btn btn-default'
-    strClass += ' active' if request.fullpath == path
+    strClass += 'btn nav-btn' if request.fullpath == path
     return link_to title, path, :class => strClass
   end
 end

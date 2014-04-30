@@ -29,6 +29,7 @@ textarea { resize: none }
       position: relative;
       display: table;
       float: none;
+      border-radius: 3px;
       margin: 0 auto;
 
     }
@@ -43,6 +44,8 @@ textarea { resize: none }
   background: $main-bg;
   text-align: center;
   margin-bottom: 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 
@@ -98,6 +101,19 @@ textarea { resize: none }
   border-radius: 3px;
   border-style: solid;
   border-color: $white;
+}
+
+.text-block{
+  text-indent:4px;
+
+  padding: 4px;
+
+  background: $white; 
+  color: #A0A0A0;
+  border: 1px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: #E8E8E8;
 }
 
 .nav-btn:hover{
@@ -216,3 +232,4 @@ textarea { resize: none }
 .avatar {
   margin-top: 25%;
 }
+

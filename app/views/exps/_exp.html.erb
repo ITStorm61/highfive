@@ -1,0 +1,9 @@
+<%  user=User.find(exp.user_id2) %>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 col-xs-12 band-block-frnd">
+            <div class="avatar_frlist"><img class="img-rounded" src="<%=user.picture_url %>" height="80px" width="80px"> </div>
+            <div class="nickname_frlist"> <%=  user.name %></div>  
+            <div class="badge"> +<%= exp.value %></div>
+          </div>
+        </div>

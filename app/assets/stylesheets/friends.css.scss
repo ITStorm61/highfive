@@ -1,0 +1,41 @@
+// Place all the styles related to the friends controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.badge {
+    float: right;
+    height: 20px;
+    margin-top: 30px;
+    margin-right: 15px;
+}
+.nickname_frlist {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 15px; 
+    color: #885E4F;
+    text-align: left;
+    display: inline-block;
+}
+.avatar_frlist {
+    margin: 5px;
+    display: inline-block;
+    float: left; 
+}
+
+
+
+.band-block-frnd {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  border-bottom-width: 1px;
+  border-bottom-color: 666;
+  margin-top: 1%;
+  transition: 0.2s;
+  border: 1px;
+  border-style: solid;
+  border-color: #EBEBEB;
+}
+
+.band-block-frnd:hover {
+  background: #EBEBEB;
+}
