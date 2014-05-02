@@ -6,6 +6,8 @@
 $main-bg: #DC4C26;
 $light: #F1B6A2;
 $white: #fff;
+$green: #a3d9aa;
+$red: #ffa9a3;
 
 textarea { resize: none }
 
@@ -93,34 +95,49 @@ textarea { resize: none }
 }
 
 .light-btn{ 
- 
-  background: $white no-repeat;  
- 
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  color: $light;
-  border: 1px;
-  border-radius: 3px;
-  border-style: solid;
-  transition: 0.2s;
-  font-family: 'Open Sans', sans-serif;
-  font-weight:300;
-  font-size: 16px;
-  border-color: $light;
+  color: $white;
   text-decoration: none;
+  transition: 0.2s;
 }
 
 .light-btn:hover{
-  background: $light;
+  background: $white;
   background-size: 20%;
-  color: $white;  
+  color: $main-bg;  
   border-color: $main-bg;
   border: 1px;
   border-radius: 3px;
   border-style: solid;
   border-color: $light;
   text-decoration: none;
+}
+
+.front-btn{
+  color: $white;
+}
+
+.front-btn:hover{
+  color: $main-bg;
+}
+
+.yes-btn{
+  background: $green;
+  border-color: $green;
+}
+
+.yes-btn:hover{
+  color: $green;
+  border-color: $green;
+}
+
+.no-btn{
+  background: $red;
+  border-color: $red;
+}
+
+.no-btn:hover{
+  color: $red;
+  border-color: $red;
 }
 
 .mrg{
@@ -274,7 +291,6 @@ textarea { resize: none }
 }
 
 .bar-logo-text{
-  font-family: 'Open Sans', sans-serif;
-  color: $white;
+  color: $light;
 }
 
