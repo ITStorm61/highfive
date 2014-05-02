@@ -6,6 +6,8 @@
 $main-bg: #DC4C26;
 $light: #F1B6A2;
 $white: #fff;
+$green: #a3d9aa;
+$red: #ffa9a3;
 
 textarea { resize: none }
 
@@ -59,7 +61,6 @@ textarea { resize: none }
   margin-top: 5px;
 }
 
-
 .btn{ 
  
   background: $light no-repeat;  
@@ -77,6 +78,8 @@ textarea { resize: none }
   font-size: 16px;
   border-color: $light;
  /* border-radius: 0;*/
+  height: 35px;
+  text-decoration: none;
 }
 
 .btn:hover{
@@ -88,20 +91,75 @@ textarea { resize: none }
   border-radius: 3px;
   border-style: solid;
   border-color: $light;
+  text-decoration: none;
+}
+
+.light-btn{ 
+  color: $white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.light-btn:hover{
+  background: $white;
+  background-size: 20%;
+  color: $main-bg;  
+  border-color: $main-bg;
+  border: 1px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: $light;
+  text-decoration: none;
+}
+
+.front-btn{
+  color: $white;
+}
+
+.front-btn:hover{
+  color: $main-bg;
+}
+
+.yes-btn{
+  background: $green;
+  border-color: $green;
+}
+
+.yes-btn:hover{
+  color: $green;
+  border-color: $green;
+}
+
+.no-btn{
+  background: $red;
+  border-color: $red;
+}
+
+.no-btn:hover{
+  color: $red;
+  border-color: $red;
 }
 
 .mrg{
   margin-top:7px;
 }
 
-.nav-btn
+.btn-active
 {
-  background: $white; 
-  color: $main-bg;
+  background: $main-bg; 
+  color: $light;
   border: 1px;
   border-radius: 3px;
   border-style: solid;
-  border-color: $white;
+  border-color: $light;
+  text-decoration: none;
+}
+
+.btn-active:hover{
+  background: $main-bg;
+  color: $light;
+  text-decoration: none;
+  border-color: $light;
 }
 
 .text-block{
@@ -115,11 +173,7 @@ textarea { resize: none }
   border-radius: 3px;
   border-style: solid;
   border-color: #E8E8E8;
-}
-
-.nav-btn:hover{
-  background: $white;
-  color: $main-bg;
+  text-decoration: none;
 }
 
 .input-group-btn { 
@@ -223,10 +277,12 @@ textarea { resize: none }
   border: 1px;
   border-style: solid;
   border-color: #EBEBEB;
+  text-decoration: none;
 }
 
 .band-block:hover {
   background: #EBEBEB;
+  text-decoration: none;
 }
 
 
@@ -235,7 +291,6 @@ textarea { resize: none }
 }
 
 .bar-logo-text{
-  font-family: 'Open Sans', sans-serif;
-  color: $white;
+  color: $light;
 }
 
