@@ -6,8 +6,9 @@
 $main-bg: #DC4C26;
 $light: #F1B6A2;
 $white: #fff;
-$green: #a3d9aa;
-$red: #ffa9a3;
+$green: #80b955;
+$red: #ED2E21;
+$gray:#EFEFEF;
 
 textarea { resize: none }
 
@@ -42,9 +43,9 @@ textarea { resize: none }
   min-width: 100px; 
   margin: -5px;
   padding: 0;
-  border-radius: 0;
-  border: none;
-  background: $main-bg;
+  background: $white;
+  border-color: $main-bg;
+  border: 1px;
   text-align: center;
   margin-bottom: 10px;
   border-top-left-radius: 3px;
@@ -53,7 +54,7 @@ textarea { resize: none }
 
 
 .header{
-  color:$white; 
+  color:$main-bg; 
   font-family: 'Open Sans', sans-serif;
   font-weight:300;
   font-size: 24px;
@@ -63,12 +64,12 @@ textarea { resize: none }
 
 .btn{ 
  
-  background: $light no-repeat;  
+  background: $main-bg no-repeat;  
  
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: $main-bg;
+  color: $white;
   border: 1px;
   border-radius: 3px;
   border-style: solid;
@@ -76,39 +77,39 @@ textarea { resize: none }
   font-family: 'Open Sans', sans-serif;
   font-weight:300;
   font-size: 16px;
-  border-color: $light;
+  border-color: $main-bg;
  /* border-radius: 0;*/
   height: 35px;
   text-decoration: none;
 }
 
 .btn:hover{
-  background: $light;
+  background: $main-bg;
   background-size: 20%;
-  color: $white;  
+  color: $light;  
   border-color: $main-bg;
   border: 1px;
   border-radius: 3px;
   border-style: solid;
-  border-color: $light;
+  border-color: $main-bg;
   text-decoration: none;
 }
 
 .light-btn{ 
-  color: $white;
+  background: $white;
+  color: $main-bg;
   text-decoration: none;
   transition: 0.2s;
 }
 
 .light-btn:hover{
-  background: $white;
+  background: $light;
   background-size: 20%;
   color: $main-bg;  
-  border-color: $main-bg;
   border: 1px;
   border-radius: 3px;
   border-style: solid;
-  border-color: $light;
+  border-color: $main-bg;
   text-decoration: none;
 }
 
@@ -121,23 +122,27 @@ textarea { resize: none }
 }
 
 .yes-btn{
-  background: $green;
+  background: $white;
   border-color: $green;
+  color: $green;
 }
 
 .yes-btn:hover{
-  color: $green;
+  background: $green;
+  color: $white;
   border-color: $green;
 }
 
 .no-btn{
-  background: $red;
+  background: $white;
   border-color: $red;
+  color: $red;
 }
 
 .no-btn:hover{
-  color: $red;
+  background: $red;
   border-color: $red;
+  color: $white;
 }
 
 .mrg{
@@ -146,20 +151,20 @@ textarea { resize: none }
 
 .btn-active
 {
-  background: $main-bg; 
-  color: $light;
+  background: $white; 
+  color: $main-bg;
   border: 1px;
   border-radius: 3px;
   border-style: solid;
-  border-color: $light;
+  border-color: $main-bg;
   text-decoration: none;
 }
 
 .btn-active:hover{
-  background: $main-bg;
-  color: $light;
+  background: $white;
+  color: $main-bg;
   text-decoration: none;
-  border-color: $light;
+  border-color: $main-bg;
 }
 
 .text-block{
@@ -239,7 +244,13 @@ textarea { resize: none }
   text-align: left;
 }
 
+.org-text {
+  color: $main-bg;
+}
 
+.lorg-text {
+  color: $light;
+}
 
 .updated {
   color: #7D7D7D;
@@ -269,28 +280,40 @@ textarea { resize: none }
 
 .band-block {
   font-family: 'Open Sans', sans-serif;
-  border-radius: 10px;
+  background: $white;
+  border-radius: 4px;
   border-bottom-width: 1px;
   border-bottom-color: 666;
   margin-top: 1%;
   transition: 0.2s;
   border: 1px;
   border-style: solid;
-  border-color: #EBEBEB;
+  border-color: #E6E6E6;
   text-decoration: none;
 }
 
 .band-block:hover {
-  background: #EBEBEB;
-  text-decoration: none;
+  border-color: $main-bg;
 }
 
+.profile-block {
+  font-family: 'Open Sans', sans-serif;
+  background: $white;
+  border-radius: 4px;
+  margin-top: 1%;
+  transition: 0.2s;
+  border: 1px;
+  border-style: solid;
+  border-color: #E6E6E6;
+  text-decoration: none;
+  max-width: 900px;
+}
 
 .avatar {
   margin-top: 25%;
 }
 
 .bar-logo-text{
-  color: $light;
+  color: $main-bg;
 }
 

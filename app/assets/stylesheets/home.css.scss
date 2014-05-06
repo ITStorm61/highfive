@@ -1,6 +1,6 @@
  html,body{
 	height:100%;
-	background:#FFFFFF;
+	background:#EFEFEF;
 }
 .navbar-center{
     margin: 0 auto;
@@ -17,7 +17,7 @@
 .navbar > .container-fluid .navbar-brand {
 }
 
-.navbar { min-width: 400px; background: #DC4C26;
+.navbar { min-width: 400px; background: #fff; border-color: #DC4C26;
 
 }
 
@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6{
 	border-color: #FFFFFF; 
 	width: 160px;
 	height: 50px;
-	margin-top:7px;
+	margin-top:1px;
 	border: 1px;
   	border-radius: 3px;
   	border-style: solid;
@@ -72,8 +72,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .index-navbar-header{
-	color:#FFFFFF; 
-	margin-top:15px;
+	color: #DC4C26; 
+	margin-top:9px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 }
