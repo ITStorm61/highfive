@@ -5,13 +5,13 @@
 					<img class="avatar" src="<%= @task.user.picture_url %>">
 				</div>
 				<div class="col-md-10">
-					<span class="username"><%= @task.user.name %> прислал вам задание</span>
+					<span class="username"><span class="org-text"><%= @task.user.name %> </span> прислал вам задание</span>
 					<div class="text-block"><%= @task.description %></div>
 					<span>Награда</span>
 					<p class="text-block"><%= @task.cookie %></p>
 					<center>
-						<button type="button" class="btn front-btn">Принять</button>
-						<button type="button" class="btn front-btn">Отклонить</button>
+						<button type="button" class="btn yes-btn">Принять</button>
+						<button type="button" class="btn no-btn">Отклонить</button>
 					</center>
 				</div>
 			</div>
