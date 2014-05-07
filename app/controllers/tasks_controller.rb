@@ -3,7 +3,11 @@ class TasksController < ApplicationController
   
 
   def index
+    @notice = "" 
     @tasks=Task.where("user_id=? or slave_id=?",@current_user.id, @current_user.id).includes(:user).order("updated_at DESC")
+    if @tasks.count==0
+      @notice = "Empty task list!"
+    end
   end
 
   def show
