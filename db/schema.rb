@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20140418130157) do
     t.string   "uid"
     t.string   "provider"
     t.string   "picture_url"
+    t.string   "picture_large_url"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -10,8 +10,7 @@
 					<span>Награда</span>
 					<p class="text-block"><%= @task.cookie %></p>
 					<center>
-						<button type="button" class="btn yes-btn">Принять</button>
-						<button type="button" class="btn no-btn">Отклонить</button>
+						<%= control_buttons(@current_user,@task) %>
 					</center>
 				</div>
 			</div>

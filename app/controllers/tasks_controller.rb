@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   
 
   def index
-    @tasks=Task.where("user_id=? or slave_id=?",@current_user.id, @current_user.id).includes(:user)
+    @tasks=Task.where("user_id=? or slave_id=?",@current_user.id, @current_user.id).includes(:user).order("updated_at DESC")
   end
 
   def show
@@ -20,9 +20,7 @@ class TasksController < ApplicationController
 
     @task  = Task.new(task_params)
     @task.user_id=@current_user.id
-    @task.slave_id=666
-
-    @task.status="Open"
+    @task.status="new"
 
     if @task.save
       render 'share', :layout =>"dialog"
@@ -32,11 +30,34 @@ class TasksController < ApplicationController
 
   end
 
- # def share
- #   render :layout =>"dialog"
- # end
+  def share
+    @task = Task.find(params[:task_id])
+    render :layout =>"dialog"
+  end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path
+  end
 
+  def update_status 
+    @task = Task.find(params[:task_id])
+    if @task.user_id==@current_user.id 
+      # my task
+    else
+      # other task
+      case @task.status
+      when "new"
+        if params[:status]=="0"
+          @task.slave_id = @current_user.id
+          @task.status = "in_progress"
+          @task.save
+        end
+      end
+    end
+    redirect_to task_path(@task)
+  end
 
   private
   def task_params
