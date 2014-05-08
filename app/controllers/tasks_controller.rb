@@ -3,7 +3,11 @@ class TasksController < ApplicationController
   
 
   def index
+    @notice = "" 
     @tasks=Task.where("user_id=? or slave_id=?",@current_user.id, @current_user.id).includes(:user).order("updated_at DESC")
+    if @tasks.count==0
+      @notice = "Empty task list!"
+    end
   end
 
   def show
@@ -23,7 +27,7 @@ class TasksController < ApplicationController
     @task.status="new"
 
     if @task.save
-      render 'share', :layout =>"dialog"
+      render 'show', :layout =>"dialog"
     else
       render 'new', :layout =>"dialog"
     end
@@ -45,6 +49,13 @@ class TasksController < ApplicationController
     @task = Task.find(params[:task_id])
     if @task.user_id==@current_user.id 
       # my task
+      case @task.status
+        when "in_progress"
+          if params[:status]=="1"
+            @task.status = "canceled"
+            @task.save
+          end
+        end
     else
       # other task
       case @task.status
@@ -54,6 +65,14 @@ class TasksController < ApplicationController
           @task.status = "in_progress"
           @task.save
         end
+      when "in_progress"
+          if params[:status]=="0"
+            @task.status = "done"
+            @task.save
+          elsif params[:status]=="1"
+            @task.status = "canceled"
+            @task.save
+          end
       end
     end
     redirect_to task_path(@task)

@@ -9,6 +9,7 @@ $white: #fff;
 $green: #80b955;
 $red: #ED2E21;
 $gray:#EFEFEF;
+$blue: #32D0D9;
 
 textarea { resize: none }
 
@@ -144,6 +145,20 @@ textarea { resize: none }
   border-color: $red;
   color: $white;
 }
+
+
+.done-btn{
+  background: $white;
+  border-color: $blue;
+  color: $blue;
+}
+
+.done-btn:hover{
+  background: $blue;
+  color: $white;
+  border-color: $blue;
+}
+
 
 .mrg{
   margin-top:7px;
