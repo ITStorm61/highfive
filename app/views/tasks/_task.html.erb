@@ -13,7 +13,8 @@
 							<p class="row-fluid call-lg-12 col-xs-12 col-md-12 col-s-12 remaining"><%= task.deadline %></p>	
 						</div>
 						<div class="col-lg-3 col-xs-2 col-md-2 col-s-2">
-							<p class="updated"><%= task.updated_at%></p>
+							<p class="updated"><%= timeago(task.updated_at) %></p>
+
 							<p class="status"><%= task.status %></p>
 						</div>
 					</div>

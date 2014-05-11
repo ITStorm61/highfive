@@ -1,3 +1,4 @@
+# coding: utf-8
 module TasksHelper
 
 	def control_buttons(user, task)
@@ -21,5 +22,10 @@ module TasksHelper
 				  link_to("Отменить", task_update_status_path(@task, 1) , method: "put", class:"btn no-btn", confirm: "Вы уверены?")
 			end
 		end
+	end
+
+	def timeago(time, options = {})
+		options[:class] ||= "timeago"
+		content_tag(:abbr, time.to_s, options.merge(:title => time.getutc.iso8601)) if time
 	end
 end

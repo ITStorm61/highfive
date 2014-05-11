@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.timeago
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-datetimepicker
