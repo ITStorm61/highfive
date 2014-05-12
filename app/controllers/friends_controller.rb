@@ -9,4 +9,8 @@ class FriendsController < ApplicationController
         end
     end
 
+    def self.inc_exp(id1,id2)
+        Exp.update_relationship!(id1,id2)
+    end
+
 end

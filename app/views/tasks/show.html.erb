@@ -1,5 +1,7 @@
 <div class="container-fluid">
 <%= @task.status %> <!-- just for debug -->
+
+
 			<div class="col-md-12">
 				<div class="col-md-2">
 					<img class="avatar" src="<%= @task.user.picture_url %>">
@@ -10,7 +12,9 @@
 					<span>Награда</span>
 					<p class="text-block"><%= @task.cookie %></p>
 					<center>
-						<%= control_buttons(@current_user,@task) %>
+						<div class="col-md-12" >
+							<%= control_buttons(@current_user,@task) %>
+						</div>
 					</center>
 				</div>
 			</div>

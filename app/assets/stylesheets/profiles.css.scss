@@ -10,24 +10,6 @@
 	height:50px;
 }
 
-.otst50
-{
-	height:50px;
-	background:#FFFFFF;
-}
-
-.otst20
-{
-	height:20px;
-	background:#FFFFFF;
-}
-
-.otst10
-{
-	height:10px;
-	background:#FFFFFF;
-}
-
 .profil-title-name
 {
 	background: #DC4C26;
@@ -49,10 +31,14 @@
 	color: #b19e98;
 }
 
+.margin{
+	height:40px;
+}
+
 .profil-razdelitel
 {
-	background: #dccbc1;
-	height:2px;
+	background: #DC4C26;
+	height:1px;
 }
 
 .slitno  
@@ -64,10 +50,9 @@
 	font-size: 16px;
 }
 
-.profil-inf
-{
-	font-family: 'Open Sans', sans-serif;
-	font-weight:300;
-	color: #dfdab6;
-	font-size: 16px;
+.big-avatar{
+	border: 1px;
+	border-color: #DC4C26;
+	border-radius: 3px;
+	max-width: 100px;
 }

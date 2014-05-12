@@ -13,5 +13,10 @@
     <%= render :partial => 'layouts/top_bar' %>
     <%= yield %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+<script type="text/javascript">
+  $("abbr.timeago").timeago();
+</script>
+
   </body>
 </html>

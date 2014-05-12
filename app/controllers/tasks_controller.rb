@@ -62,6 +62,7 @@ class TasksController < ApplicationController
       when "new"
         if params[:status]=="0"
           @task.slave_id = @current_user.id
+          
           @task.status = "in_progress"
           @task.save
         end
@@ -69,6 +70,7 @@ class TasksController < ApplicationController
           if params[:status]=="0"
             @task.status = "done"
             @task.save
+            FriendsController.inc_exp(@task.user_id, @task.slave_id)
           elsif params[:status]=="1"
             @task.status = "canceled"
             @task.save
