@@ -3,6 +3,7 @@
 # Table name: tasks
 #
 #  id          :integer          not null, primary key
+#  token       :text
 #  user_id     :integer
 #  description :text
 #  cookie      :text

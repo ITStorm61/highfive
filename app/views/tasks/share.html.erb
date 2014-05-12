@@ -15,14 +15,14 @@
     var h=d[g]('body')[0];
     h.appendChild(s);
   }})();</script>
-<div data-url="<%= task_url(@task.id) %>" class="pluso" data-background="transparent" data-options="big,square,line,horizontal,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir"></div>
+<div data-url="<%= task_url(@task.token) %>" class="pluso" data-background="transparent" data-options="big,square,line,horizontal,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir"></div>
 
 
     <form role="form">
 
 
 <!--         <div class="input-group"> -->
-            <input class="form-control text-input" onfocus="this.select()" value="<%= task_url(@task.id) %>" readonly>
+            <input class="form-control text-input" onfocus="this.select()" value="<%= task_url(@task.token) %>" readonly>
 
             <!-- <span class="input-group-btn">
                 <button type="button" class="btn">
