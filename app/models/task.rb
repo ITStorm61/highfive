@@ -28,13 +28,12 @@ class Task < ActiveRecord::Base
 
 
 
-  
+  private
 
   def generate_token
 
     self.token = loop do
-    # random_token = rand(1000).to_s + self.id.to_s
-      random_token = Digest::SHA1.hexdigest(Time.now.to_s + self.id.to_s)  # find_by_token return nil WHY???
+      random_token = Digest::SHA1.hexdigest(Time.now.to_s + self.id.to_s).encode("UTF-8")
       break random_token unless Task.exists?(token: random_token)
     end
 
