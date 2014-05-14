@@ -7,7 +7,9 @@
 					<img class="avatar" src="<%= @task.user.picture_url %>">
 				</div>
 				<div class="col-md-10">
-					<span class="username"><span class="org-text"><%= @task.user.name %> </span> прислал вам задание</span>
+					<span class="username"><span class="org-text"><%= @task.user.name %> </span> создал задание</span>
+					<br>
+					<span class="username"><span class="org-text"><%= @task.slave.nil? ? "Никто" : @task.slave.name %> </span> выполняет задание</span>
 					<div class="text-block"><%= @task.description %></div>
 					<span>Награда</span>
 					<p class="text-block"><%= @task.cookie %></p>
