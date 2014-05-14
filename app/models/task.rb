@@ -18,6 +18,8 @@
 class Task < ActiveRecord::Base
     belongs_to :user
     
+    belongs_to :slave, :class_name => 'User', :foreign_key => 'slave_id'
+    
     validates :description, :cookie, :presence => true
     
     after_create :generate_token
@@ -33,7 +35,8 @@ class Task < ActiveRecord::Base
   def generate_token
 
     self.token = loop do
-      random_token = Digest::SHA1.hexdigest(Time.now.to_s + self.id.to_s).encode("UTF-8")
+      random_token = SecureRandom.hex(4).encode("UTF-8")
+      #random_token = Digest::SHA1.hexdigest(Time.now.to_s + self.id.to_s).encode("UTF-8")
       break random_token unless Task.exists?(token: random_token)
     end
 
