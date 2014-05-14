@@ -6,7 +6,7 @@ module TasksHelper
 		 #  мои задания
 			case task.status
 			when "new"
-					return link_to("Поделиться", task_share_path(task), class:"btn light-btn") +"  " + link_to("Удалить", task_path(task), method:"delete" , class:"btn light-btn", confirm: "Вы уверены?")
+					return link_to("Поделиться", task_share_path(@task.token), class:"btn light-btn") +"  " + link_to("Удалить", task_path(task), method:"delete" , class:"btn light-btn", confirm: "Вы уверены?")
 			when "in_progress"
 				return  link_to("Завершить", task_update_status_path(@task, 1) , method: "put", class:"btn no-btn", confirm: "Вы уверены?")
 			end

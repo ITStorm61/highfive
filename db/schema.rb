@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140418130157) do
   end
 
   create_table "tasks", force: true do |t|
+    t.text     "token"
     t.integer  "user_id"
     t.text     "description"
     t.text     "cookie"

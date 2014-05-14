@@ -9,11 +9,6 @@ class TasksController < ApplicationController
       @notice = "Empty task list!"
     end
   end
-
-  def show
-    @task = Task.find(params[:id])
-    render :layout =>"dialog"
-  end
   
   def new
     @task  = Task.new
@@ -34,19 +29,26 @@ class TasksController < ApplicationController
 
   end
 
+  def show
+    @task = Task.find_by_token(params[:token])
+    #render :text => params[:token] + " " + @task.inspect 
+    render :layout =>"dialog"
+  end
+
   def share
-    @task = Task.find(params[:task_id])
+    @task = Task.find_by_token(params[:task_token])
+    #render :text => params[:task_token] + " " + @task.inspect 
     render :layout =>"dialog"
   end
 
   def destroy
-    @task = Task.find(params[:id])
+    @task = Task.find_by(token: params[:token])
     @task.destroy
     redirect_to tasks_path
   end
 
   def update_status 
-    @task = Task.find(params[:task_id])
+    @task = Task.find_by(token: params[:task_token])
     if @task.user_id==@current_user.id 
       # my task
       case @task.status
