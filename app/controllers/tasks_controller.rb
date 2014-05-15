@@ -4,7 +4,7 @@ class TasksController < ApplicationController
 
   def index
     @notice = "" 
-    @tasks=Task.where("user_id=? or slave_id=?",@current_user.id, @current_user.id).includes(:user).order("updated_at DESC")
+    @tasks=Task.where("user_id=? or slave_id=?",@current_user.id, @current_user.id).includes(:user).order("updated_at DESC").page(params[:page]).per(5)
     if @tasks.count==0
       @notice = "Empty task list!"
     end
@@ -86,4 +86,6 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:description, :cookie, :deadline)
   end
+   
+  
 end
