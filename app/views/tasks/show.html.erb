@@ -9,6 +9,10 @@
 				<div class="col-md-10">
 					<span class="username"><span class="otext"><%= @task.user.name %> </span> создал задание</span>
 					<!--p class="username">Задание выполняет: <span class="org-text"><%= @task.slave_id %> </span></p-->
+					
+					
+					<span class="username"><span class="otext"><%= @task.slave.nil? ? "Никто" : @task.slave.name %> </span> выполняет задание</span>
+					<br>
 					<div class="text-block btext"><%= @task.description %></div>
 					<span>Награда</span>
 					<p class="text-block btext"><%= @task.cookie %></p>
