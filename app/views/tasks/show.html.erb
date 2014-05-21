@@ -7,12 +7,15 @@
 					<img class="avatar" src="<%= @task.user.picture_url %>">
 				</div>
 				<div class="col-md-10">
-					<span class="username"><span class="org-text"><%= @task.user.name %> </span> создал задание</span>
+					<span class="username"><span class="otext"><%= @task.user.name %> </span> создал задание</span>
+					<!--p class="username">Задание выполняет: <span class="org-text"><%= @task.slave_id %> </span></p-->
 					<br>
-					<span class="username"><span class="org-text"><%= @task.slave.nil? ? "Никто" : @task.slave.name %> </span> выполняет задание</span>
-					<div class="text-block"><%= @task.description %></div>
+					
+					<span class="username"><span class="otext"><%= @task.slave.nil? ? "Никто" : @task.slave.name %> </span> выполняет задание</span>
+					<br>
+					<div class="text-block btext"><%= @task.description %></div>
 					<span>Награда</span>
-					<p class="text-block"><%= @task.cookie %></p>
+					<p class="text-block btext"><%= @task.cookie %></p>
 					<center>
 						<div class="col-md-12" >
 							<%= control_buttons(@current_user,@task) %>

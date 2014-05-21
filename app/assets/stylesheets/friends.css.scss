@@ -2,24 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$main-bg: #DC4C26;
+$light: #F1B6A2;
+$white: #fff;
+$green: #80b955;
+$red: #ED2E21;
+$gray:#EFEFEF;
+$blue: #32D0D9;
+
 .badge {
     float: right;
     height: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
+    background: $main-bg;
     margin-right: 15px;
 }
 .nickname_frlist {
-    font-size: 30px;
-    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    margin-top: 16px;
     margin-left: 15px; 
-    color: #885E4F;
+    color: $main-bg;
     text-align: left;
     display: inline-block;
 }
 .avatar_frlist {
     margin: 5px;
     display: inline-block;
-    float: left; 
+    float: left;
+    border-radius: 3px;
+    border: 1px solid $main-bg; 
 }
 
 
@@ -30,6 +43,7 @@
   border-bottom-width: 1px;
   border-bottom-color: 666;
   margin-top: 1%;
+  max-width: 200px;
   transition: 0.2s;
   border: 1px;
   border-style: solid;

@@ -1,3 +1,10 @@
+$main-bg: #DC4C26;
+$light: #F1B6A2;
+$white: #fff;
+$green: #80b955;
+$red: #ED2E21;
+$gray:#EFEFEF;
+$blue: #32D0D9;
 
 .profil
 {
@@ -24,11 +31,11 @@
 	color: #DC4C26;
 }
 
-.profil-status
+.btext
 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
-	color: #b19e98;
+	color: #000000;
 }
 
 .margin{
@@ -41,18 +48,23 @@
 	height:1px;
 }
 
-.slitno  
+.otext{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	line-height: 1.9em;
+	color: $main-bg;
+}
+
+.gtext  
 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
 	line-height: 1.9em;
 	color: #ababab;
-	font-size: 16px;
 }
 
 .big-avatar{
-	border: 1px;
-	border-color: #DC4C26;
+	border: 1px solid #DC4C26;
 	border-radius: 3px;
 	max-width: 100px;
 }
