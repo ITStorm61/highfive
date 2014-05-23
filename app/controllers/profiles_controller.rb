@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
-	before_action :set_current_user
+  before_action :set_current_user
+  layout "main"
 
-	def show
-  	end
+  def show
+  end
 end

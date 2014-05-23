@@ -17,15 +17,51 @@
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('/assets/glyphicons-halflings-regular.eot');
-  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
-       url('/assets/glyphicons-halflings-regular.woff') format('woff'), 
-       url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), 
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('/assets/glyphicons-halflings-regular.woff') format('woff'),
+       url('/assets/glyphicons-halflings-regular.ttf') format('truetype'),
        url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-body 
+body
 {
 	padding-top: 60px;
+}
+/* HEADERS */
+h3 {
+  color:#DC4C26;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+  font-size: 24px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Dialog Box */
+.dialog-content {
+  width: 500px;
+  top: 100px;
+  background-color: white;
+  padding: 5px;
+  padding-top: 0;
+  position: relative;
+  display: table;
+  float: none;
+  border-radius: 3px;
+  margin: 0 auto;
+
+}
+
+@media only screen and (min-width:960px){
+    /* styles for browsers larger than 960px; */
+    .dialog-content {
+      width: 500px;
+      top: 100px;
+    }
+}
+
+@media only screen and (max-device-width:480px){
+   /* styles for mobile browsers smaller than 480px; (iPhone) */
 }
 
 /* paginater */

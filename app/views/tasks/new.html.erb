@@ -1,62 +1,15 @@
-<% provide(:title, "Создать") %>
-
-<div class="row">
-    <div class="col-md-12 col-xs-12">
-
-    <%= form_for :task, :url => tasks_path do |f|%>
-
-        <% if @task.errors.any? %>
-              <div class="error_explanation">
-                <strong><%= pluralize(@task.errors.count, "error") %> prohibited
-                  this task from being saved:</strong>
-                <ul>
-                <% @task.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-                <% end %>
-                </ul>
-              </div>
-        <% end %>
-
-
-        <%= f.text_area :description ,:class => "form-control text-input", :rows => "5", :placeholder=>"Задание",
-                        :onfocus => "if(this.value==\"\") {this.value='Пожалуйста, '}" %>
-        <br>
-        <%= f.text_field :cookie ,:class => "form-control text-input", :placeholder=>"Награда" %>
-        <br>
-
-        <!-- <div class="form-group">
-          <div class="input-group date form_datetime">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-            <%= f.text_field :deadline ,:class => "form-control text-input", :readonly => true, :placeholder=>"Дата"%>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-          </div>
-        </div>
- -->
-
-        <br>
-        <%= f.submit "Отправить", :class => "btn light-btn" %>
-    <% end %>
-<!-- 
-  <script type="text/javascript">
-      function GetRoundedDate()
-      {
-        curDate = new Date();
-        curDate.setMinutes(0);
-        curDate.setHours(curDate.getHours()+1);
-        return curDate;
-      }
-      $(".form_datetime").datetimepicker({
-        format: "dd/MM/yyyy - hh:ii",
-        startDate: GetRoundedDate(),
-        initialDate: GetRoundedDate(),
-        autoclose: true,     
-        pickerPosition: "top-left",
-        minuteStep: 30,
-        todayHighlight: true,
-        minView: 1
-        });
-    </script> 
- -->
-    </div>
-</div>
-
+<h3><%= I18n.t('task.new') %></h3>
+<%= form_for :task, :url => tasks_path, :remote => true,  html: {role: :form, 'data-model' => 'task'} do |f|%>
+  <div class="form-group">
+    <%= f.text_area :description ,:class => "form-control text-input", :rows => "5", :placeholder => I18n.t('task.description'),
+                  :onfocus => "if(this.value==\"\") {this.value='#{I18n.t('task.please')}'}" %>
+    <span class="help-block"></span>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :cookie ,:class => "form-control text-input", :placeholder => I18n.t('task.cookie') %>
+    <span class="help-block"></span>
+  </div>
+  <div class="form-group" style="text-align: center">
+    <%= f.submit I18n.t('task.create'), :class => "btn light-btn" %>
+  </div>
+<% end %>

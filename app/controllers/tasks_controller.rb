@@ -1,44 +1,38 @@
 class TasksController < ApplicationController
 	before_action :set_current_user
-  
+  layout false
 
   def index
-    @notice = "" 
+    @notice = ""
     @tasks=Task.where("user_id=? or slave_id=?",@current_user.id, @current_user.id).includes(:user).order("updated_at DESC").page(params[:page]).per(5)
     if @tasks.count==0
       @notice = "Empty task list!"
     end
+    render layout: 'main'
   end
-  
+
   def new
     @task  = Task.new
-    render :layout =>"dialog"
   end
 
   def create
-
-    @task  = Task.new(task_params)
+    @task = Task.new(task_params)
     @task.user_id=@current_user.id
     @task.status="new"
-
     if @task.save
-      render 'show', :layout =>"dialog"
+      render js: "window.location='#{root_path}';"
     else
-      render 'new', :layout =>"dialog"
+      render json: @task.errors, status: :unprocessable_entity
     end
 
   end
 
   def show
     @task = Task.find_by_token(params[:token])
-    #render :text => params[:token] + " " + @task.inspect 
-    render :layout =>"dialog"
   end
 
   def share
     @task = Task.find_by_token(params[:task_token])
-    #render :text => params[:task_token] + " " + @task.inspect 
-    render :layout =>"dialog"
   end
 
   def destroy
@@ -47,9 +41,9 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-  def update_status 
+  def update_status
     @task = Task.find_by(token: params[:task_token])
-    if @task.user_id==@current_user.id 
+    if @task.user_id==@current_user.id
       # my task
       case @task.status
         when "in_progress"
@@ -64,7 +58,7 @@ class TasksController < ApplicationController
       when "new"
         if params[:status]=="0"
           @task.slave_id = @current_user.id
-          
+
           @task.status = "in_progress"
           @task.save
         end
@@ -72,7 +66,7 @@ class TasksController < ApplicationController
           if params[:status]=="0"
             @task.status = "done"
             @task.save
-            FriendsController.inc_exp(@task.user_id, @task.slave_id)
+            # FriendsController.inc_exp(@task.user_id, @task.slave_id)
           elsif params[:status]=="1"
             @task.status = "canceled"
             @task.save
@@ -84,8 +78,8 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:description, :cookie, :deadline)
+    params.require(:task).permit(:description, :cookie)
   end
-   
-  
+
+
 end

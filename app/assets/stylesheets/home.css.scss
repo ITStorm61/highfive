@@ -6,7 +6,7 @@
     margin: 0 auto;
     display: table;
     float:none;
-}  
+}
 
 /* always right for all reslutuins */
 .navbar-right {
@@ -38,9 +38,6 @@ textarea { resize: none }
 .fr{
 	float:right;
 }
-h1,h2,h3,h4,h5,h6{
-	color:#666;
-}
 
 .index-vk_btn{
 	background: #DC4C26 url(/images/vk-btn.svg) no-repeat;
@@ -52,7 +49,7 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 16px;
 	text-decoration: none;
 	color:#FFFFFF;
-	border-color: #FFFFFF; 
+	border-color: #FFFFFF;
 	width: 160px;
 	height: 50px;
 	margin-top:1px;
@@ -72,7 +69,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .index-navbar-header{
-	color: #DC4C26; 
+	color: #DC4C26;
 	margin-top:9px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
@@ -84,7 +81,7 @@ h1,h2,h3,h4,h5,h6{
 	font-size: 28px;
 	text-align: center;
 	color: #4E4E4E;
-	
+
 }
 	/* Блок серого цвета с текстом */
 .index-text-block{
@@ -107,7 +104,7 @@ h1,h2,h3,h4,h5,h6{
 	color: #DC4C26;
 }
 
-	/* Текст на белом фоне */ 
+	/* Текст на белом фоне */
 .index-text-front{
 	font-family: 'Open Sans', sans-serif;
 	font-weight:300;
@@ -118,15 +115,15 @@ h1,h2,h3,h4,h5,h6{
 
 	/* Ссылки внутри блоков */
 .index-a-inb {
-    color: #B0B0B0; 
-    text-decoration: none; 
+    color: #B0B0B0;
+    text-decoration: none;
 }
 
 .index-a-inb:visited {
-    color: #B0B0B0; 
-} 
+    color: #B0B0B0;
+}
 
 .index-a-inb:hover {
-    color: #FFFFFF; 
-    text-decoration: none; 
+    color: #FFFFFF;
+    text-decoration: none;
 }

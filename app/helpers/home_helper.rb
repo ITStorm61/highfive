@@ -1,5 +1,5 @@
 module HomeHelper
 	def login_path
-		return Rails.env.development? ? "/auth/vkontakte" : "/auth/developer"
+		return "/auth/vkontakte"
 	end
 end

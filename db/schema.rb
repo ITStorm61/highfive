@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20140418130157) do
     t.integer  "user_id"
     t.text     "description"
     t.text     "cookie"
-    t.datetime "deadline"
     t.integer  "slave_id"
     t.string   "status"
     t.datetime "created_at"

@@ -45,6 +45,13 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'omniauth-vkontakte'
 
+# Комментарии к моделям
 gem 'annotate'
-#Paginator
+
+# Для пагинации данных
 gem 'kaminari'
+# Перевод сообщении на русский
+gem 'russian'
+
+gem 'quiet_assets', group: :development
+gem "awesome_print"

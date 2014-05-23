@@ -17,3 +17,48 @@
 //= require bootstrap
 //= require bootstrap-datetimepicker
 //= require_tree .
+
+window.dialogLoad = function(url) {
+    $.rails.ajax({
+        url: url,
+        success: function(data) {
+            window.location.hash = url
+            $('#mainDialog .dialog-content').html(data);
+            $('#mainDialog').show();
+        }
+    })
+}
+
+$(document)
+    .on('click', '.dialog-box', function(e) {
+        if (e.target == this) {
+            window.location.hash = '';
+            $(this).hide();
+        }
+    })
+/* a data-remote="true" */
+.on('ajax:success', 'a[data-remote]', function(e, data, status, xhr) {
+    window.location.hash = $(e.target).attr('href');
+    $('#mainDialog .dialog-content').html(data);
+    $('#mainDialog').show();
+})
+    .on('ajax:before', 'a[data-remote]', function(e) {
+        $('#mainDialog .dialog-content').empty();
+        $('#mainDialog').show();
+    })
+    .on('ajax:error', 'a[data-remote]', function(e, xhr, status, error) {
+        console.error(error);
+        $('#mainDialog').hide();
+        alert(error);
+    })
+/* form data-remote="true" */
+.on('ajax:error', 'form[data-remote]', function(e, xhr, status, error) {
+    $(this).render_form_errors($.parseJSON(xhr.responseText));
+});
+
+$(document).ready(function() {
+    if (window.location.hash) {
+        var hashUrl = window.location.hash.substring(1);
+        window.dialogLoad(hashUrl);
+    }
+});

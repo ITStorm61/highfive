@@ -1,27 +1,23 @@
 <div class="container-fluid">
-		<div class="row-fluid">
-			<div class="col-lg-3 col-xs-0 col-md-2 col-s-1"></div>
-				<a href="<%= task_path(task.token) %>" class="col-lg-6 col-xs-12 col-md-8 col-s-10 band-block">
-					<div style="margin-top:2%">
-						<div class="col-lg-1 col-xs-2 col-md-1 col-s-1"> <img class="avatar" src="<%= task.user.picture_url %>" height="60px" width="60px"> </div>
-						<div class="col-lg-8 col-xs-8 col-md-9 col-s-9">
-							<p class="row-fluid col-lg-12 col-xs-12 col-md-12 col-s-12 nickname"> <%= task.user.name %> </p>
-							<div class="row-fluid col-lg-12 col-xs-12 col-md-12 col-s-12">
-								<p class="btext" >  <%= task.description %>  </p>
-								<p class="task" >
-								<%= truncate(task.description, :length => 100, :omission => "... (см подробнее)") %>
-								</p>
-								<p class="award"> <%= task.cookie %></p>
-							</div>
-							<p class="row-fluid call-lg-12 col-xs-12 col-md-12 col-s-12 remaining">
-								<%= task.deadline.nil? ? "Неограниченно" : task.deadline %>
-							</p>	
-						</div>
-						<div class="col-lg-3 col-xs-2 col-md-2 col-s-2">
-							<p class="updated"><%= timeago(task.updated_at) %></p>
-							<p class="status"><%= task.status %></p>
-						</div>
-					</div>
-				</a>
-		</div>
-	</div>
+    <div class="row-fluid">
+      <div class="col-lg-3 col-xs-0 col-md-2 col-s-1"></div>
+        <a href="<%= task_path(task.token) %>" class="col-lg-6 col-xs-12 col-md-8 col-s-10 band-block" data-remote="true">
+          <div style="margin-top:2%">
+            <div class="col-lg-1 col-xs-2 col-md-1 col-s-1"> <img class="avatar" src="<%= task.user.picture_url %>" height="60px" width="60px"> </div>
+            <div class="col-lg-8 col-xs-8 col-md-9 col-s-9">
+              <p class="row-fluid col-lg-12 col-xs-12 col-md-12 col-s-12 nickname"> <%= task.user.name %> </p>
+              <div class="row-fluid col-lg-12 col-xs-12 col-md-12 col-s-12">
+                <p class="task" >
+                  <%= task.description %>
+                </p>
+                <p class="award"> <%= task.cookie %></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-xs-2 col-md-2 col-s-2">
+              <p class="updated"><%= timeago(task.updated_at) %></p>
+              <p class="status"><%= task.status %></p>
+            </div>
+          </div>
+        </a>
+    </div>
+  </div>

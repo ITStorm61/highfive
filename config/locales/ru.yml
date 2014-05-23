@@ -1,0 +1,7 @@
+ru:
+  task:
+    new: "Новое задание"
+    description: "Задание"
+    please: "Пожалуйста, "
+    cookie: "Награда"
+    create: "Создать задание"
