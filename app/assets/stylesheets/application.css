@@ -10,6 +10,7 @@
  *
  *= require bootstrap
  *= require bootstrap-datetimepicker
+ *= require zocial
  *= require_self
  *= require_tree .
  */
