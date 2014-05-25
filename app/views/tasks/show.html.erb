@@ -22,7 +22,9 @@
     </div>
   </div>
 </div>
-<div class="row" style="margin-top:10px">
-  <%= render partial: "tasks/share", locals: { task: @task } %>
+
+<div id="share_bar" class="row" style="margin-top:10px; visibility: visible">
+ <%= render partial: "tasks/share", locals: { task: @task } %>
 </div>
+
 </div>
