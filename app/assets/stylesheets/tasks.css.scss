@@ -9,7 +9,7 @@ $white: #fff;
 $green: #80b955;
 $red: #ED2E21;
 $gray:#EFEFEF;
-$blue: #32D0D9;
+$blue: #5182BB;
 
 textarea { resize: none }
 
@@ -155,7 +155,7 @@ textarea { resize: none }
   border: 1px;
   border-radius: 3px;
   border-style: solid;
-  border-color: $main-bg;
+  border-color: $light;
   text-decoration: none;
 }
 
@@ -222,8 +222,8 @@ textarea { resize: none }
   text-align: left;
 }
 
-.org-text {
-  color: $main-bg;
+.wtext {
+  color: #fff;
 }
 
 .lorg-text {
@@ -299,3 +299,7 @@ textarea { resize: none }
   color: $main-bg;
 }
 
+.bar{
+  background: $main-bg;
+  border-radius: 3px;
+}
