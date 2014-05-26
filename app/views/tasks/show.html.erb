@@ -1,30 +1,33 @@
 <div class="container-fluid">
-<div class="row">
-  <div class="col-md-12">
-    <div class="col-md-2">
-      <img class="avatar" src="<%= @task.user.picture_url %>">
-    </div>
-    <div class="col-md-10">
-      <span class="username"><span class="otext"><%= @task.user.name %> </span> создал задание</span>
-      <!--p class="username">Задание выполняет: <span class="org-text"><%= @task.slave_id %> </span></p-->
-      <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-2">
+        <img class="avatar" src="<%= @task.user.picture_url %>">
+      </div>
+      <div class="col-md-10">
+        <span class="username"><span class="otext"><%= @task.user.name %> </span> создал задание</span>
+        <!--p class="username">Задание выполняет: <span class="org-text"><%= @task.slave_id %> </span></p-->
+        <br>
 
-      <span class="username"><span class="otext"><%= @task.slave.nil? ? "Никто" : @task.slave.name %> </span> выполняет задание</span>
-      <br>
-      <div class="text-block btext"><%= @task.description %></div>
-      <span>Награда</span>
-      <p class="text-block btext"><%= @task.cookie %></p>
-      <center>
-        <div class="col-md-12" >
-          <%= control_buttons(@current_user,@task) %>
-        </div>
-      </center>
+        <span class="username"><span class="otext"><%= @task.slave.nil? ? "Никто" : @task.slave.name %> </span> выполняет задание</span>
+        <br>
+        <div class="text-block btext"><%= @task.description %></div>
+        <span>Награда</span>
+        <p class="text-block btext"><%= @task.cookie %></p>
+        <center>
+          <div class="col-md-12" >
+            <% if @task.isOwner? @current_user %>
+              <%= render partial: "tasks/controls_owner", locals: { task: @task } %>
+            <% else %>
+              <%= render partial: "tasks/controls_slave", locals: { task: @task } %>
+            <% end %>
+          </div>
+        </center>
+      </div>
     </div>
   </div>
-</div>
 
-<div id="share_bar" class="row" style="margin-top:10px; visibility: visible">
- <%= render partial: "tasks/share", locals: { task: @task } %>
-</div>
-
+  <div id="share_bar" class="row" style="margin-top:10px; visibility: visible">
+   <%= render partial: "tasks/share", locals: { task: @task } %>
+  </div>
 </div>

@@ -27,32 +27,34 @@ window.dialogLoad = function(url) {
             $('#mainDialog').show();
         }
     })
-}
+};
 
-$(document)
-    .on('click', '.dialog-box', function(e) {
-        if (e.target == this) {
-            window.location.hash = '';
-            $(this).hide();
-        }
-    })
+$(document).on('click', '.dialog-box', function(e) {
+    if (e.target == this) {
+        window.location.hash = '';
+        $(this).hide();
+    }
+});
 /* a data-remote="true" */
-.on('ajax:success', 'a[data-remote]', function(e, data, status, xhr) {
+$(document).on('ajax:success', 'a[data-remote]', function(e, data, status, xhr) {
+    console.log('success');
     window.location.hash = $(e.target).attr('href');
+    console.log(data);
     $('#mainDialog .dialog-content').html(data);
     $('#mainDialog').show();
-})
-    .on('ajax:before', 'a[data-remote]', function(e) {
-        $('#mainDialog .dialog-content').empty();
-        $('#mainDialog').show();
-    })
-    .on('ajax:error', 'a[data-remote]', function(e, xhr, status, error) {
-        console.error(error);
-        $('#mainDialog').hide();
-        alert(error);
-    })
+});
+$(document).on('ajax:before', 'a[data-remote]', function(e) {
+    $('#mainDialog .dialog-content').empty();
+    $('#mainDialog').show();
+});
+$(document).on('ajax:error', 'a[data-remote]', function(e, xhr, status, error) {
+    console.error(error);
+    $('#mainDialog').hide();
+    alert(error);
+});
+
 /* form data-remote="true" */
-.on('ajax:error', 'form[data-remote]', function(e, xhr, status, error) {
+$(document).on('ajax:error', 'form[data-remote]', function(e, xhr, status, error) {
     $(this).render_form_errors($.parseJSON(xhr.responseText));
 });
 

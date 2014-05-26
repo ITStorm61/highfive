@@ -1,0 +1,15 @@
+<% if task.status == 'new' %><!-- Владелец только создал данное задание -->
+  <%= link_to("Принять", task_take_path(@task.token), class: "btn yes-btn", data: { remote: true }) %>
+  <%= link_to("Отказаться", task_refuse_path(@task.token) , class: "btn no-btn", data: { remote: true, confirm: "Вы уверены?" }) %>
+<% elsif task.status == 'in_process' %><!-- Задание уже кто-го делает -->
+  <%= link_to("Готово", task_done_path(@task.token) , class: "btn yes-btn", data: { remote: true }) %>
+  <%= link_to("Отказаться", task_cancel_path(@task.token) , class: "btn no-btn", data: { remote: true, confirm: "Вы уверены?" }) %>
+<% elsif task.status == 'ready' %><!-- Задание сделано, нужно отдать награду -->
+  <p class="text-info">Ждем награду ...</p>
+<% elsif task.status == 'done' %><!-- Задание завершено, награда получена все счастливы -->
+  <p class="text-success">Готово</p>
+<% elsif task.status == 'canceled' %><!-- Владелец задания отменил его -->
+  <p class="text-danger">Владелец отменил задание</p>
+<% else %>
+  Error :( Такого "<%= task.status %>" статуса не должно быть
+<% end %>

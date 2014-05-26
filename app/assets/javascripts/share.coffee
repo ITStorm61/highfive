@@ -6,7 +6,7 @@ window.openUrl = (url) ->
   return window.open(url, 'share', "location, width=#{w},height=#{h}, top=#{top}, left=#{left}")
 
 $(document).on 'click', '.share-buttons > a', (e) ->
-    parent = $(e.target).parent()
+    parent = $(e.target).parents('.share-buttons').eq(0)
     provider = $(e.target).data('provider')
     description = encodeURIComponent(parent.data('description') || '')
     img = encodeURIComponent(parent.data("image") || '')

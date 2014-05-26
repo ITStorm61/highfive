@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-	before_action :set_current_user
+  before_action :set_current_user, :except => [:show]
   layout false
 
   def index
@@ -24,15 +24,6 @@ class TasksController < ApplicationController
     else
       render json: @task.errors, status: :unprocessable_entity
     end
-
-  end
-
-  def show
-    @task = Task.find_by_token(params[:token])
-  end
-
-  def share
-    @task = Task.find_by_token(params[:task_token])
   end
 
   def destroy
@@ -41,45 +32,70 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-  def update_status
-    @task = Task.find_by(token: params[:task_token])
-    if @task.user_id==@current_user.id
-      # my task
-      case @task.status
-        when "in_progress"
-          if params[:status]=="1"
-            @task.status = "canceled"
-            @task.save
-          end
-        end
-    else
-      # other task
-      case @task.status
-      when "new"
-        if params[:status]=="0"
-          @task.slave_id = @current_user.id
-
-          @task.status = "in_progress"
-          @task.save
-        end
-      when "in_progress"
-          if params[:status]=="0"
-            @task.status = "done"
-            @task.save
-            # FriendsController.inc_exp(@task.user_id, @task.slave_id)
-          elsif params[:status]=="1"
-            @task.status = "canceled"
-            @task.save
-          end
-      end
+  def show
+    @current_user=User.find_by_id(session[:user_id]) unless session[:user_id].nil?
+    @task = Task.find_by_token(params[:token])
+    if @current_user.blank?
+      render "show_with_login", layout: "index"
+    elsif !request.xhr?
+      redirect_to root_path + '#' + task_path(params[:token])
     end
-    redirect_to task_path(@task)
   end
 
-  private
+  # Кто-то хочет взять задание
+  def take
+    @task = Task.find_by(token: params[:task_token])
+    if @task.slave_id.nil?
+      @task.slave_id = @current_user.id
+      @task.status = "in_process"
+      @task.save
+    end
+    render js: "window.dialogLoad('#{task_path(@task.token)}');"
+  end
+
+  # refuse отказаться от выполнения
+  def refuse
+    @task = Task.find_by(token: params[:task_token])
+    render js: "window.location='#{root_path}';"
+  end
+
+  def cancel  # Отменить взятое задание
+    @task = Task.find_by(token: params[:task_token])
+    if @task.isOwner?(@current_user)
+      @task.status = "canceled"
+      @task.save
+    elsif @task.isSlave?(@current_user)
+      @task.slave_id = nil
+      @task.status = "new"
+      @task.save
+    end
+    render js: "window.dialogLoad('#{task_path(@task.token)}');"
+  end
+
+  def done # Кто-то выполнил задание
+    @task = Task.find_by(token: params[:task_token])
+    if @task.isSlave?(@current_user)
+      @task.status = "ready"
+      @task.save
+    end
+    render js: "window.dialogLoad('#{task_path(@task.token)}');"
+  end
+
+  def finish # Отдал награду
+    @task = Task.find_by(token: params[:task_token])
+    if @task.isOwner?(@current_user)
+      @task.status = "done"
+      @task.save
+    end
+    render js: "window.dialogLoad('#{task_path(@task.token)}');"
+  end
+
+private
   def task_params
     params.require(:task).permit(:description, :cookie)
   end
 
-
+  def set_task
+    @task = Task.find_by(token: params[:task_token])
+  end
 end
