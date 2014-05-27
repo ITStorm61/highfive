@@ -6,7 +6,7 @@ class FriendsController < ApplicationController
     @notice=""
     @friends=Exp.where("user_id1=?", @current_user.id)
     if @friends.count==0
-      @notice = "Empty friend list!"
+      @notice = "У вас нет еще ни одного друга на сервисе!"
     end
   end
 
