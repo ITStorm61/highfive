@@ -7,7 +7,7 @@
 <% elsif task.status == 'ready' %><!-- Задание сделано, нужно отдать награду -->
   <p class="text-info">Ждем награду ...</p>
 <% elsif task.status == 'done' %><!-- Задание завершено, награда получена все счастливы -->
-  <p class="text-success">Готово</p>
+  <p class="text-success">Завершено</p>
 <% elsif task.status == 'canceled' %><!-- Владелец задания отменил его -->
   <p class="text-danger">Владелец отменил задание</p>
 <% else %>

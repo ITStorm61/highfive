@@ -6,7 +6,7 @@
   <%= link_to("Наградить", task_finish_path(@task.token) , class: "btn yes-btn", data: { remote: true }) %>
   <%= link_to("Отказаться", task_cancel_path(@task.token) , class: "btn no-btn", data: { remote: true, confirm: "Вы уверены?" }) %>
 <% elsif task.status == 'done' %><!-- Задание завершено, награда получена все счастливы -->
-  <p class="text-success">Готово</p>
+  <p class="text-success">Завершено</p>
 <% elsif task.status == 'canceled' %><!-- Владелец задания отменил его -->
   <p class="text-danger">Вы отменили задание</p>
 <% else %>

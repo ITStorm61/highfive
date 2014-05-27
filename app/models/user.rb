@@ -14,23 +14,32 @@
 #
 
 class User < ActiveRecord::Base
-	has_many :tasks
-	def self.find_by_omni(auth)
-		where(auth.slice("uid","provider")).first || create_by_omni(auth)
-	end
-	
-	def self.create_by_omni(auth)
-		create! do |user|
-			user.uid=auth.uid
-			user.provider=auth.provider
-			if auth.provider=="vkontakte"
-				user.picture_url=auth.info.image
-				user.picture_large_url=auth.extra.raw_info.photo_200_orig
-				user.name=auth.info.name
-			end
-			if auth.provider=="developer"
-				user.name=auth.info.name
-			end
-		end
-	end	
+  has_many :tasks
+
+  def picture_url
+    read_attribute(:picture_url).presence || "/images/unknown-user.png"
+  end
+
+  def picture_large_url
+    read_attribute(:picture_large_url).presence || "/images/unknown-user.png"
+  end
+
+  def self.find_by_omni(auth)
+    where(auth.slice("uid","provider")).first || create_by_omni(auth)
+  end
+
+  def self.create_by_omni(auth)
+    create! do |user|
+      user.uid=auth.uid
+      user.provider=auth.provider
+      if auth.provider=="vkontakte"
+        user.picture_url=auth.info.image
+        user.picture_large_url=auth.extra.raw_info.photo_200_orig
+        user.name=auth.info.name
+      end
+      if auth.provider=="developer"
+        user.name=auth.info.name
+      end
+    end
+  end
 end

@@ -1,25 +1,25 @@
+<div class="row bar">
+  <span class="btext navbar-center" style="font-size:20px"><span class="wtext"><%= @task.user.name %> </span> создал задание</span>
+</div>
 <div class="container-fluid">
-<div class="row">
-  <div class="col-md-12">
-    <div class="col-md-2">
-      <img class="avatar" src="<%= @task.user.picture_url %>">
-    </div>
-    <div class="col-md-10">
-      <span class="username"><span class="otext"><%= @task.user.name %> </span> создал задание</span>
-      <!--p class="username">Задание выполняет: <span class="org-text"><%= @task.slave_id %> </span></p-->
-      <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-12">
 
-      <span class="username"><span class="otext"><%= @task.slave.nil? ? "Никто" : @task.slave.name %> </span> выполняет задание</span>
-      <br>
-      <div class="text-block btext"><%= @task.description %></div>
-      <span>Награда</span>
-      <p class="text-block btext"><%= @task.cookie %></p>
-
-      <center>
-        Пожалуйста, войдите в систему или зарегистрируйтесь. <br><br>
-        <a href="<%= login_path %>" class="zocial vk">Войти через Vkontakte</a>
-        <!-- <a href="/auth/developer" class="zocial email">Войти через Developer</a> -->
-      </center>
+        <div class="row">
+        <span class="btext"><span class="otext"><%= @task.slave.nil? ? "Никто не" : @task.slave.name %> </span> выполняет задание</span>
+        </div>
+        <div class="text-block "><%= @task.description %></div>
+        <div class="row">
+        <span class="btext">Награда за выполнение:</span>
+        </div>
+        <p class="text-block "><%= @task.cookie %></p>
+        <center>
+          <div class="col-md-12" >
+            Пожалуйста, войдите в систему или зарегистрируйтесь. <br><br>
+            <a href="<%= login_path %>" class="zocial vk">Войти через Vkontakte</a>
+          </div>
+        </center>
+      </div>
     </div>
   </div>
-</div>

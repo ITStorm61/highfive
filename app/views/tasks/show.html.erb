@@ -27,7 +27,9 @@
     </div>
   </div>
 
-  <div id="share_bar" class="row navbar-right" style="margin-top:10px; visibility: visible">
-   <%= render partial: "tasks/share", locals: { task: @task } %>
-  </div>
+  <% if @task.status == 'new' %>
+    <div id="share_bar" class="row" style="margin-top:10px; visibility: visible">
+     <%= render partial: "tasks/share", locals: { task: @task } %>
+    </div>
+  <% end %>
 </div>

@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -50,5 +47,14 @@ gem 'kaminari'
 # Перевод сообщении на русский
 gem 'russian'
 
-gem 'quiet_assets', group: :development
 gem "awesome_print"
+
+group :production do
+  gem 'unicorn'
+  gem 'mysql2'
+end
+
+group :development do
+  gem 'quiet_assets'
+  gem 'sqlite3'
+end

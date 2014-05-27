@@ -15,7 +15,7 @@
             </div>
             <div class="col-lg-3 col-xs-2 col-md-2 col-s-2">
               <p class="updated"><%= timeago(task.updated_at) %></p>
-              <p class="status"><%= task.status %></p>
+              <p class="status"><%= display_status(task.status) %></p>
             </div>
           </div>
         </a>

@@ -49,6 +49,7 @@ class TasksController < ApplicationController
       @task.slave_id = @current_user.id
       @task.status = "in_process"
       @task.save
+      Exp.create_relationship(@task.user_id, @task.slave_id) unless Exp.exists_relationship?(@task.user_id, @task.slave_id)
     end
     render js: "window.dialogLoad('#{task_path(@task.token)}');"
   end
@@ -86,6 +87,7 @@ class TasksController < ApplicationController
     if @task.isOwner?(@current_user)
       @task.status = "done"
       @task.save
+      Exp.increment(@task.user_id, @task.slave_id)
     end
     render js: "window.dialogLoad('#{task_path(@task.token)}');"
   end
