@@ -1,4 +1,4 @@
-PLZKI::Application.routes.draw do
+TODOforME::Application.routes.draw do
   match "/auth/:provider/callback", to:"sessions#create", via:[:get, :post]
 
   resources :tasks, only: [:create, :new, :index, :show, :destroy], param: :token do

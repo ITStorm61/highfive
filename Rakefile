@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-PLZKI::Application.load_tasks
+TODOforME::Application.load_tasks

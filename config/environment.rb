@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the Rails application.
-PLZKI::Application.initialize!
+TODOforME::Application.initialize!

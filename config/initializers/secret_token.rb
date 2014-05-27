@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-PLZKI::Application.config.secret_key_base = '203d05492fe185bc741ace0f27395e49f614d4c6beef43c7558e4389b820f8ff5466112219712f55f36c0b73bfba4ece0c9678af3ff2d497b9f3cfc175a5d728'
+TODOforME::Application.config.secret_key_base = '203d05492fe185bc741ace0f27395e49f614d4c6beef43c7558e4389b820f8ff5466112219712f55f36c0b73bfba4ece0c9678af3ff2d497b9f3cfc175a5d728'

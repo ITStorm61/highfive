@@ -57,4 +57,9 @@ end
 group :development do
   gem 'quiet_assets'
   gem 'sqlite3'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-unicorn'
 end
