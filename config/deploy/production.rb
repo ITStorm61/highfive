@@ -10,7 +10,7 @@ role :app, %w{devteam@194.58.98.152}
 role :web, %w{devteam@194.58.98.152}
 role :db,  %w{devteam@194.58.98.152}
 
-server '194.58.98.152', user: 'devteam', roles: %w{web app}, primary: true
+server '194.58.98.152', user: 'devteam', roles: %w{web app }, primary: true
 
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
