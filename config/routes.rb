@@ -1,5 +1,6 @@
 TODOforME::Application.routes.draw do
   match "/auth/:provider/callback", to:"sessions#create", via:[:get, :post]
+  match '/auth/failure' => 'sessions#failure'
 
   resources :tasks, only: [:create, :new, :index, :show, :destroy], param: :token do
     get 'take'    # Кто-то хочет взять задание
