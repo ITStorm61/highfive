@@ -15,6 +15,6 @@ server '194.58.98.152', user: 'devteam', roles: %w{web app }, primary: true
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
 
-set :unicorn_pid, "#{fetch(:deploy_user)}/shared/tmp/pids/unicorn.pid"
-set :unicorn_config_path, "#{fetch(:deploy_user)}/current/config/unicorn.rb"
+set :unicorn_pid, "#{fetch(:deploy_to)}/shared/tmp/pids/unicorn.pid"
+set :unicorn_config_path, "#{fetch(:deploy_to)}/current/config/unicorn.rb"
 set :unicorn_rack_env, "production"
