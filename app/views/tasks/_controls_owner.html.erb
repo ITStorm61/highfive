@@ -1,5 +1,5 @@
 <% if task.status == 'new' %><!-- Владелец только создал данное задание -->
-  <%= link_to("Удалить", task_path(task), method:"delete" , class:"btn light-btn", confirm: "Вы уверены?") %>
+  <%= link_to("Удалить", task_path(task.token), method:"delete" , class:"btn light-btn", confirm: "Вы уверены?") %>
 <% elsif task.status == 'in_process' %><!-- Задание уже кто-го делает -->
 <% elsif task.status == 'ready' %><!-- Задание сделано, нужно отдать награду -->
   <p class="text-success">Вы должны отдать награду</p>
