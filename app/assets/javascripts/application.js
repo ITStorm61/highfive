@@ -37,9 +37,7 @@ $(document).on('click', '.dialog-box', function(e) {
 });
 /* a data-remote="true" */
 $(document).on('ajax:success', 'a[data-remote]', function(e, data, status, xhr) {
-    console.log('success');
     window.location.hash = $(e.target).attr('href');
-    console.log(data);
     $('#mainDialog .dialog-content').html(data);
     $('#mainDialog').show();
 });

@@ -20,7 +20,7 @@ class TasksController < ApplicationController
     @task.user_id=@current_user.id
     @task.status="new"
     if @task.save
-      render js: "window.location='#{root_path}';"
+      render js: "window.dialogLoad('#{task_path(@task.token)}');"
     else
       render json: @task.errors, status: :unprocessable_entity
     end
